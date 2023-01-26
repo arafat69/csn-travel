@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Comments" transform="translate(-1574 -69)">
+    <rect id="Rectangle_792" data-name="Rectangle 792" width="24" height="24" transform="translate(1574 69)" fill="#fff" opacity="0"/>
+    <g id="Icon_ionic-md-chatbubbles" data-name="Icon ionic-md-chatbubbles" transform="translate(1573.75 68.75)">
+      <path id="Path_2587" data-name="Path 2587" d="M6.225,17.25a2.447,2.447,0,0,1-2.1-2.1V7.5h-.45A1.43,1.43,0,0,0,2.25,8.925V21.75l2.742-2.719H15.075A1.448,1.448,0,0,0,16.5,17.583V17.25Z"/>
+      <path id="Subtraction_1" data-name="Subtraction 1" d="M-1559.39-1247.391h0l-3.556-2.483h-11.166a1.64,1.64,0,0,1-1.635-1.641v-10.6a1.638,1.638,0,0,1,1.635-1.636h13.088a1.638,1.638,0,0,1,1.636,1.636v14.723ZM-1564-1257.75a1,1,0,0,0-1,1,1,1,0,0,0,1,1,1,1,0,0,0,1-1A1,1,0,0,0-1564-1257.75Zm-3.447,0a1,1,0,0,0-1,1,1,1,0,0,0,1,1,1,1,0,0,0,1-1A1,1,0,0,0-1567.445-1257.75Zm-3.446,0a1,1,0,0,0-1,1,1,1,0,0,0,1,1,1,1,0,0,0,1-1A1,1,0,0,0-1570.891-1257.75Z" transform="translate(1581.141 1266)"/>
+    </g>
+  </g>
+</svg>

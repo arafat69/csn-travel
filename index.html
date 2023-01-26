@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/calendarTheme.css" />
+  <link rel="stylesheet" href="assets/css/calendarStyle.css" />
+  <title>CSN Travel</title>
+</head>
+
+<body>
+  <section>
+    <div class="container-fluid">
+      <aside class="sidebar-wrap hide" id="sidebar">
+        <ul>
+          <a href="index.html" class="py-3 logo position-relative d-block mb-4">
+            <img class="main-logo" src="assets/images/logo.svg" alt="" />
+          </a>
+
+          <a href="index.html" class="side-menu active">
+            <img width="20" src="assets/icons/SVG/flight.svg" alt="" />Flight
+          </a>
+
+          <a href="booking.html" class="side-menu">
+            <img width="20" src="assets/icons/SVG/booking.svg" alt="" />
+            Booking
+          </a>
+          <a href="#" class="side-menu">
+            <img width="20" src="assets/icons/SVG/Wallet.svg" alt="" />
+            Wallet
+          </a>
+          <a href="reports.html" class="side-menu">
+            <img width="20" src="assets/icons/SVG/report.svg" alt="" />
+            Reports
+          </a>
+          <a href="profile.html" class="side-menu">
+            <img width="20" src="assets/icons/SVG/profile.svg" alt="" />
+            Profile
+          </a>
+        </ul>
+
+        <div class="bottom_user d-none d-md-block">
+          <div class="d-flex justify-content-between">
+            <img class="avater" src="assets/images/Shop logo.svg" />
+            <div>
+              <a href="/" class="auth">Shop</a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <span class="name">Moshe Shop</span>
+            <span class="email">shop_00@example.com</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!--************** Start Header Section ************-->
+        <div class="sticky-top w-100 top_navbar">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10 bg-white py-2 text-right">
+              <a href="#" id="toggle-btn" onclick="toggleSidebar()" class="btn toggle-sidebar">
+                <i class="fas fa-bars"></i>
+              </a>
+
+              <div class="multilanguage-section">
+                <a href="#" class="language active">EN</a>
+                <a href="#" class="language">IT</a>
+              </div>
+
+              <div class="left-header">
+                <div class="dropdown m-0">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="avater" src="assets/images/Shop logo.svg" alt="profile"/>
+                  </button>
+                  <div class="dropdown-menu header-dropdown-menu card-shadow" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="change-password.html">
+                      <img src="assets//icons/SVG/key.svg" />
+                      Change Password
+                    </a>
+                    <a class="dropdown-item" href="#logout"
+                      onclick="event.preventDefault();document.getElementById('logout').submit()">
+                      <img src="assets/icons/SVG/logout.svg" />
+                      Log out
+                    </a>
+                    <form id="logout" action="login.html" method="POST"></form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--************** End Header Section ************-->
+
+        <div class="row">
+          <div class="col-lg-2 pr-0"></div>
+          <div class="col-lg-10 content body-color p-0 pb-2">
+            <div class="container-fluid">
+              <!--*********** Start Layout Section *************-->
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="search_filterBox">
+                   <div class="d-flex justify-content-start flex-wrap dropdown_section">
+                    <div class="selectBox">
+                      <select name="">
+                        <option value="Round-Trip">Round-Trip</option>
+                        <option value="One-Way">One-Way</option>
+                        <option value="Multi City">Multi City</option>
+                      </select>
+                    </div>
+
+                    <div class="selectBox">
+                      <select name="">
+                        <option value="Economy">Economy</option>
+                        <option value="Business">Business</option>
+                        <option value="First Class">First Class</option>
+                      </select>
+                    </div>
+
+                    <div class="dropdown passenger_luggeses">
+                      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div>
+                          <img src="assets//icons/passenger.svg"> 2
+                        </div>
+                        <div>
+                          <img src="assets//icons/luggages.svg"> 1
+                        </div>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                      <div class="passenger">
+                        <strong class="title">Passengers</strong>
+
+                        <div class="items">
+                         <p class="type"> Adult <span>(16-64)</span></p>
+                         <div class="actions">
+                           <button><i class="fa fa-minus"></i></button>
+                           <span>2</span>
+                           <button> <i class="fa fa-plus"></i></button>
+                         </div>
+                        </div>
+ 
+                        <div class="items">
+                         <p class="type"> Senior <span>(65+)</span></p>
+                         <div class="actions">
+                           <button><i class="fa fa-minus"></i></button>
+                           <span>0</span>
+                           <button> <i class="fa fa-plus"></i></button>
+                         </div>
+                        </div>
+ 
+                        <div class="items">
+                         <p class="type"> Child <span>(2-15)</span></p>
+                         <div class="actions">
+                           <button><i class="fa fa-minus"></i></button>
+                           <span>0</span>
+                           <button> <i class="fa fa-plus"></i></button>
+                         </div>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="luggages">
+                        <div class="items">
+                          <strong class="title">Luggages</strong>
+                          <div class="actions">
+                            <button><i class="fa fa-minus"></i></button>
+                            <span>1</span>
+                            <button> <i class="fa fa-plus"></i></button>
+                          </div>
+                         </div>
+                      </div>
+                      <div class="items d-flex justify-content-between mt-1">
+                        <button class="resetBtn">Reset</button>
+                        <button class="doneBtn">Done</button>
+                      </div>
+
+                      </div>
+                    </div>
+                   </div>
+
+                  </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+              </div>
+            <!--******* End Layout Section ******-->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calendar.min.js"></script>
+  <script>
+    $(function () {
+      $(".calendar-container").calendar({
+        prevButton: '<i class="fas fa-angle-left"></i>',
+        nextButton: '<i class="fas fa-angle-right"></i>',
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener("show-modal", (event) => {
+      $("#alert").modal("show");
+      $("#modal").modal("show");
+    });
+    window.addEventListener("hide-modal", (event) => {
+      $("#alert").modal("hide");
+      $("#modal").modal("hide");
+    });
+    $(document).ready(function () {
+      $("#confirm-modal").modal("show");
+    });
+  </script>
+
+  <script>
+    function onlyNumber(evt) {
+      var chars = String.fromCharCode(evt.which);
+      if (!/[0-9]/.test(chars)) {
+        evt.preventDefault();
+      }
+    }
+
+    function onlyLetter(evt) {
+      var chars = String.fromCharCode(evt.which);
+      if (!/[a-z,A-Z]/.test(chars)) {
+        evt.preventDefault();
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/calendarTheme.css" />
+    <link rel="stylesheet" href="assets/css/calendarStyle.css" />
+    <title>CSN Travel</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <aside class="sidebar-wrap hide" id="sidebar">
+                <ul>
+                    <a href="index.html" class="py-3 logo position-relative d-block mb-4">
+                        <img class="main-logo" src="assets/images/logo.svg" alt="" />
+                    </a>
+
+                    <a href="flight.html" class="side-menu">
+                        <img width="20" src="assets/icons/SVG/flight.svg" alt="" />Flight
+                    </a>
+
+                    <a href="booking.html" class="side-menu active">
+                        <img width="20" src="assets/icons/SVG/booking.svg" alt="" />
+                        Booking
+                    </a>
+                    <a href="#" class="side-menu">
+                        <img width="20" src="assets/icons/SVG/Wallet.svg" alt="" />
+                        Wallet
+                    </a>
+                    <a href="#" class="side-menu">
+                        <img width="20" src="assets/icons/SVG/report.svg" alt="" />
+                        Reports
+                    </a>
+                    <a href="profile.html" class="side-menu">
+                        <img width="20" src="assets/images/ic-user (1).svg" alt="" />
+                        Profile
+                    </a>
+                </ul>
+
+                <div class="bottom_user d-none d-md-block">
+                    <div class="d-flex justify-content-between">
+                        <img class="avater" src="assets/images/Shop logo.svg" />
+                        <div>
+                            <a href="/" class="auth">Shop</a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <span class="name">Moshe Shop</span>
+                        <span class="email">shop_00@example.com</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <!--************** Start Header Section ************-->
+                <div class="sticky-top w-100 top_navbar">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-10 bg-white py-2 text-right">
+                            <a href="#" id="toggle-btn" onclick="toggleSidebar()" class="btn toggle-sidebar">
+                                <i class="fas fa-bars"></i>
+                            </a>
+
+                            <div class="multilanguage-section">
+                                <a href="#" class="language active">EN</a>
+                                <a href="#" class="language">IT</a>
+                            </div>
+
+                            <div class="left-header">
+                                <div class="dropdown m-0">
+                                    <img class="avater" src="assets/images/Shop logo.svg" alt="" />
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-expanded="false">
+                                        Profile Name
+                                    </button>
+                                    <div class="dropdown-menu header-dropdown-menu card-shadow"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="change-password.html">
+                                            <img src="assets//icons/SVG/key.svg" />
+                                            Change Password
+                                        </a>
+                                        <a class="dropdown-item" href="#logout"
+                                            onclick="event.preventDefault();document.getElementById('logout').submit()">
+                                            <img src="assets/icons/SVG/logout.svg" />
+                                            Log out
+                                        </a>
+                                        <form id="logout" action="login.html" method="POST"></form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--************** End Header Section ************-->
+
+                <div class="row">
+                    <div class="col-lg-2 pr-0"></div>
+                    <div class="col-lg-10 content body-color p-0 pb-2">
+                        <!--*********** Start Layout Section *************-->
+
+                        <div class="mt-3 container-fluid px-lg-4">
+                            <span class="font-weight-bold">Passport Details</span>
+
+                            <div class="row mt-2">
+                                <div class="col-md-7">
+                                    <div class="card rounded-8">
+                                        <div class="card-body">
+                                            <div class="Passport-content">
+                                                <div class="passport-name">
+                                                    <span class="">Mr. Manik Mia</span>
+                                                </div>
+                                                <div class="p-2">
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <label for="">Title</label><br />
+                                                            <select class="form-control">
+                                                                <option value="mercedes">Mr.</option>
+                                                                <option value="audi">Mst.</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <label class="mb-1">First Name<span
+                                                                    class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter First Name" />
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <label class="mb-1">Last Name<span
+                                                                    class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Last Name" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="additional-info">
+                                                        <p>
+                                                            <a class="" data-toggle="collapse" href="#collapseExample"
+                                                                role="button" aria-expanded="false"
+                                                                aria-controls="collapseExample">Additional info</a>
+                                                        </p>
+                                                        <div class="collapse" id="collapseExample">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label class="mb-1">Nationality</label>
+                                                                            <select class="form-control">
+                                                                                <option value="mercedes">Argentina</option>
+                                                                                <option value="mercedes">Bangladesh</option>
+                                                                                <option value="mercedes">Italy</option>
+                                                                                <option value="mercedes">United States</option>
+                                                                                <option value="mercedes">United Kingdom</option>
+                                                                                <option value="audi">Turkey</option>
+                                                                            </select>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="mb-1">Date Of Birth</label>
+                                                                    <input type="date" class="form-control"
+                                                                        placeholder="Enter First Name" />
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-6">
+                                                                    <label class="mb-1">Passport Or ID Number</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter Passport Or ID Number" />
+                                                                </div>
+                                                                <div class="col-md-6 ">
+                                                                    <label class="mb-1">Expiration Date</label>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <input type="date" class="form-control"
+                                                                                    placeholder="Enter First Name" />
+                                                                            </div>
+                                                                            <div class="col-md-6 d-flex align-items-center">
+                                                                                <input type="checkbox" name="" id="">
+                                                                                <label class="m-0 gap-2 "> No expiration</label>
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="passport-text">
+                                                <span class="">Mrs. Aysha Khatun
+                                                    <span class="btn age-button">Adult</span></span>
+                                            </div>
+                                            <div class="passport-text">
+                                                <span class="">Rahat Khan
+                                                    <span class="btn age-button">Child</span></span>
+                                            </div>
+                                            <div class="pasport-button">
+                                                <a href="" class="btn button-pass text-dark"><img
+                                                        src="assets/icons/SVG/Vector.svg" alt="" />
+                                                    Back</a>
+                                                <a href="" class="btn button-pass">Submit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <div class="col-md-5">
+                                        <div class="container-fluid">
+                                            <form action="" method="POST">
+                                                <div class="previewBox d-flex justify-content-between flex-column">
+                                                    <div>
+                                                        <div class="header">
+                                                            <span>Preview</span>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="preview-content">
+                                                                <label class="m-0">Full Name</label>
+                                                                <p>Mr. Manik Mia</p>
+                                                            </div>
+                                                            <div class="border_botton"></div>
+                                                            <div class="row">
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 item">
+                                                                    <label>Title</label>
+                                                                    <p id="company_name_prv">--</p>
+                                                                </div>
+
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 item">
+                                                                    <label>First Name</label>
+                                                                    <p id="cf_prv">--</p>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 item">
+                                                                    <label>Last Name</label>
+                                                                    <p id="vat_id_prv">--</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <!--******* End Layout Section ******-->
+                        </div>
+                    </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/calendar.min.js"></script>
+    <script>
+        $(function () {
+            $(".calendar-container").calendar({
+                prevButton: '<i class="fas fa-angle-left"></i>',
+                nextButton: '<i class="fas fa-angle-right"></i>',
+            });
+        });
+
+        var x = document.getElementById("snackbar");
+        x.classList.add("show");
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    </script>
+    <script>
+        window.addEventListener("show-modal", (event) => {
+            $("#alert").modal("show");
+            $("#modal").modal("show");
+        });
+        window.addEventListener("hide-modal", (event) => {
+            $("#alert").modal("hide");
+            $("#modal").modal("hide");
+        });
+        $(document).ready(function () {
+            $("#confirm-modal").modal("show");
+        });
+    </script>
+
+    <script>
+        function onlyNumber(evt) {
+            var chars = String.fromCharCode(evt.which);
+            if (!/[0-9]/.test(chars)) {
+                evt.preventDefault();
+            }
+        }
+
+        function onlyLetter(evt) {
+            var chars = String.fromCharCode(evt.which);
+            if (!/[a-z,A-Z]/.test(chars)) {
+                evt.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>
