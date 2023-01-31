@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/calendarTheme.css" />
-  <link rel="stylesheet" href="assets/css/calendarStyle.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/slick-theme.css" />
   <title>CSN Travel</title>
 </head>
 
@@ -41,10 +41,23 @@
             <img width="20" src="assets/icons/SVG/Wallet.svg" alt="" />
             Wallet
           </a>
-          <a href="reports.html" class="side-menu">
+
+          <a href="#reports" class="side-menu" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="reports">
             <img width="20" src="assets/icons/SVG/report.svg" alt="" />
-            Reports
+            <span class="d-flex justify-content-between align-items-center w-100">
+              Reports
+              <i class="fa fa-angle-down"></i>
+            </span>
           </a>
+          <div class="reportMenu">
+            <div class="collapse" id="reports">
+              <a href="" class="sub-menu">Last Sale</a>
+              <a href="" class="sub-menu">Airline Wise</a>
+              <a href="" class="sub-menu">Destination Wise</a>
+            </div>
+          </div>
+
           <a href="profile.html" class="side-menu">
             <img width="20" src="assets/icons/SVG/profile.svg" alt="" />
             Profile
@@ -84,7 +97,7 @@
                 <div class="dropdown m-0">
                   <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                     aria-expanded="false">
-                    <img class="avater" src="assets/images/Shop logo.svg" alt="profile"/>
+                    <img class="avater" src="assets/images/Shop logo.svg" alt="profile" />
                   </button>
                   <div class="dropdown-menu header-dropdown-menu card-shadow" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="change-password.html">
@@ -112,92 +125,321 @@
               <!--*********** Start Layout Section *************-->
               <div class="row">
                 <div class="col-md-9">
-                  <div class="search_filterBox">
-                   <div class="d-flex justify-content-start flex-wrap dropdown_section">
-                    <div class="selectBox">
-                      <select name="">
-                        <option value="Round-Trip">Round-Trip</option>
-                        <option value="One-Way">One-Way</option>
-                        <option value="Multi City">Multi City</option>
-                      </select>
-                    </div>
+                  <form action="flight-search-result.html">
+                    <div class="search_filterBox card card-body">
+                      <div class="d-flex justify-content-start flex-wrap dropdown_section">
+                        <div class="selectBox">
+                          <select name="">
+                            <option value="Round-Trip">Round-Trip</option>
+                            <option value="One-Way">One-Way</option>
+                            <option value="Multi City">Multi City</option>
+                          </select>
+                        </div>
 
-                    <div class="selectBox">
-                      <select name="">
-                        <option value="Economy">Economy</option>
-                        <option value="Business">Business</option>
-                        <option value="First Class">First Class</option>
-                      </select>
-                    </div>
+                        <div class="selectBox">
+                          <select name="">
+                            <option value="Economy">Economy</option>
+                            <option value="Business">Business</option>
+                            <option value="First Class">First Class</option>
+                          </select>
+                        </div>
 
-                    <div class="dropdown passenger_luggeses">
-                      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div>
-                          <img src="assets//icons/passenger.svg"> 2
-                        </div>
-                        <div>
-                          <img src="assets//icons/luggages.svg"> 1
-                        </div>
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown passenger_luggeses">
+                          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div>
+                              <img src="assets//icons/passenger.svg" /> 2
+                            </div>
+                            <div>
+                              <img src="assets//icons/luggages.svg" /> 1
+                            </div>
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div class="passenger">
+                              <strong class="title">Passengers</strong>
 
-                      <div class="passenger">
-                        <strong class="title">Passengers</strong>
+                              <div class="items">
+                                <p class="type">Adult <span>(16-64)</span></p>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>2</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
 
-                        <div class="items">
-                         <p class="type"> Adult <span>(16-64)</span></p>
-                         <div class="actions">
-                           <button><i class="fa fa-minus"></i></button>
-                           <span>2</span>
-                           <button> <i class="fa fa-plus"></i></button>
-                         </div>
-                        </div>
- 
-                        <div class="items">
-                         <p class="type"> Senior <span>(65+)</span></p>
-                         <div class="actions">
-                           <button><i class="fa fa-minus"></i></button>
-                           <span>0</span>
-                           <button> <i class="fa fa-plus"></i></button>
-                         </div>
-                        </div>
- 
-                        <div class="items">
-                         <p class="type"> Child <span>(2-15)</span></p>
-                         <div class="actions">
-                           <button><i class="fa fa-minus"></i></button>
-                           <span>0</span>
-                           <button> <i class="fa fa-plus"></i></button>
-                         </div>
-                        </div>
-                      </div>
-                      <div class="divider"></div>
-                      <div class="luggages">
-                        <div class="items">
-                          <strong class="title">Luggages</strong>
-                          <div class="actions">
-                            <button><i class="fa fa-minus"></i></button>
-                            <span>1</span>
-                            <button> <i class="fa fa-plus"></i></button>
+                              <div class="items">
+                                <p class="type">Senior <span>(65+)</span></p>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>0</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+
+                              <div class="items">
+                                <p class="type">Child <span>(2-15)</span></p>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>0</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="luggages">
+                              <div class="items">
+                                <strong class="title">Luggages</strong>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>1</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="items d-flex justify-content-between mt-1">
+                              <button class="resetBtn">Reset</button>
+                              <button class="doneBtn">Done</button>
+                            </div>
                           </div>
-                         </div>
-                      </div>
-                      <div class="items d-flex justify-content-between mt-1">
-                        <button class="resetBtn">Reset</button>
-                        <button class="doneBtn">Done</button>
+                        </div>
                       </div>
 
+                      <div class="searchInputSection">
+                        <div class="from_to">
+                          <input type="text" name="" class="form-control" placeholder="From Where?" />
+                          <input type="text" name="" class="form-control" placeholder="To Where?" />
+                          <div class="leftRightAngel">
+                            <img src="assets/icons/SVG/leftRight.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="serarch">
+                          <input type="date" name="" class="form-control" />
+                          <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-search"></i> Search Flight
+                          </button>
+                        </div>
                       </div>
                     </div>
-                   </div>
-
+                  </form>
+                  <div class="card card-body mt-4">
+                    <h5 class="title">The best flight deals from ROME</h5>
+                    <div class="flight_slider">
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide1.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide2.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide3.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide4.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide1.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide2.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="items">
+                          <img src="assets/images/slide2.png" alt="" />
+                          <div class="content">
+                            <span>Bangladesh</span>
+                            <span>From €677</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-3">
+                  <div class="card card-body mt-4">
+                    <div class="dashboard_items">
+                      <span>Today’s Booking</span>
+                      <h4>24</h4>
+                    </div>
 
+                    <div class="dashboard_items mt-3">
+                      <span>Today’s Sale</span>
+                      <h4>22</h4>
+                    </div>
+
+                    <div class="dashboard_items mt-3">
+                      <span>Expiring Booking</span>
+                      <h4>02</h4>
+                    </div>
+                  </div>
                 </div>
               </div>
-            <!--******* End Layout Section ******-->
+
+              <div class="overflow-hidden py-4">
+                <img src="assets/icons/SVG/divider.svg" alt="" />
+              </div>
+
+              <div class="ads_sections mb-2">
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="ads">
+                      <div class="title">Offers</div>
+                      <div class="descriptipons">
+                        Promotions, deals and special offers for you
+                      </div>
+                      <div class="row px-2 mt-2">
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-3 px-2">
+                          <div class="adsitems">
+                            <img src="assets/images/slide1.png" />
+                            <div class="content">
+                              <div class="save bg-red">Save up to</div>
+                              <p>
+                                <span class="price">$40</span> off our fare
+                              </p>
+                              <div class="sub">On domestic flights.</div>
+                              <div class="get_promo">
+                                <div>Get Promo Code</div>
+                                <span class="copyBtn">
+                                  <img src="assets/icons/SVG/copy.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-lg-4 col-md-6 col-sm-6 mb-3 px-2">
+                          <div class="adsitems">
+                            <img src="assets/images/slide1.png" />
+                            <div class="content">
+                              <div class="save bg-violet">Save up to</div>
+                              <p>
+                                <span class="price">$40</span> off our fare
+                              </p>
+                              <div class="sub">On domestic flights.</div>
+                              <div class="get_promo">
+                                <div>Get Promo Code</div>
+                                <span class="copyBtn">
+                                  <img src="assets/icons/SVG/copy.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-lg-4 col-md-6 col-sm-6 mb-3 px-2">
+                          <div class="adsitems">
+                            <img src="assets/images/offer1.png" />
+                            <div class="content">
+                              <div class="save bg-blue">Save up to</div>
+                              <p>
+                                <span class="price">$40</span> off our fare
+                              </p>
+                              <div class="sub">On domestic flights.</div>
+                              <div class="get_promo">
+                                <div>Get Promo Code</div>
+                                <span class="copyBtn">
+                                  <img src="assets/icons/SVG/copy.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-lg-4 col-md-6 col-sm-6 mb-3 px-2">
+                          <div class="adsitems">
+                            <img src="assets/images/offer2.png" />
+                            <div class="content">
+                              <div class="save bg-blue">Save up to</div>
+                              <p>
+                                <span class="price">$40</span> off our fare
+                              </p>
+                              <div class="sub">On domestic flights.</div>
+                              <div class="get_promo">
+                                <div>Get Promo Code</div>
+                                <span class="copyBtn">
+                                  <img src="assets/icons/SVG/copy.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-lg-4 col-md-6 col-sm-6 mb-3 px-2">
+                          <div class="adsitems">
+                            <img src="assets/images/offer3.png" />
+                            <div class="content">
+                              <div class="save bg-blue">Save up to</div>
+                              <p>
+                                <span class="price">$40</span> off our fare
+                              </p>
+                              <div class="sub">On domestic flights.</div>
+                              <div class="get_promo">
+                                <div>Get Promo Code</div>
+                                <span class="copyBtn">
+                                  <img src="assets/icons/SVG/copy.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-lg-4 col-md-6 col-sm-6 mb-3 px-2">
+                          <div class="adsitems">
+                            <img src="assets/images/offer1.png" />
+                            <div class="content">
+                              <div class="save bg-blue">Save up to</div>
+                              <p>
+                                <span class="price">$40</span> off our fare
+                              </p>
+                              <div class="sub">On domestic flights.</div>
+                              <div class="get_promo">
+                                <div>Get Promo Code</div>
+                                <span class="copyBtn">
+                                  <img src="assets/icons/SVG/copy.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <img src="assets/images/ads.png" alt="" width="100%" />
+                  </div>
+                </div>
+              </div>
+
+              <!--******* End Layout Section ******-->
             </div>
           </div>
         </div>
@@ -212,26 +454,50 @@
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/select2.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/calendar.min.js"></script>
-  <script>
-    $(function () {
-      $(".calendar-container").calendar({
-        prevButton: '<i class="fas fa-angle-left"></i>',
-        nextButton: '<i class="fas fa-angle-right"></i>',
-      });
-    });
-  </script>
-  <script>
-    window.addEventListener("show-modal", (event) => {
-      $("#alert").modal("show");
-      $("#modal").modal("show");
-    });
-    window.addEventListener("hide-modal", (event) => {
-      $("#alert").modal("hide");
-      $("#modal").modal("hide");
-    });
+  <script src="assets/js/slick.min.js"></script>
+
+  <script type="text/javascript">
     $(document).ready(function () {
-      $("#confirm-modal").modal("show");
+      $(".flight_slider").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1250,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 321,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
     });
   </script>
 

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/slick-theme.css" />
+  <title>CSN Travel</title>
+</head>
+
+<body>
+  <section>
+    <div class="container-fluid">
+      <aside class="sidebar-wrap hide" id="sidebar">
+        <ul>
+          <a href="index.html" class="py-3 logo position-relative d-block mb-4">
+            <img class="main-logo" src="assets/images/logo.svg" alt="" />
+          </a>
+
+          <a href="index.html" class="side-menu active">
+            <img width="20" src="assets/icons/SVG/flight.svg" alt="" />Flight
+          </a>
+
+          <a href="booking.html" class="side-menu">
+            <img width="20" src="assets/icons/SVG/booking.svg" alt="" />
+            Booking
+          </a>
+          <a href="#" class="side-menu">
+            <img width="20" src="assets/icons/SVG/Wallet.svg" alt="" />
+            Wallet
+          </a>
+
+          <a href="#reports" class="side-menu " data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="reports">
+            <img width="20" src="assets/icons/SVG/report.svg" alt="" />
+            <span class="d-flex justify-content-between align-items-center w-100">
+              Reports
+              <i class="fa fa-angle-down"></i>
+            </span>
+          </a>
+          <div class="reportMenu">
+            <div class="collapse" id="reports">
+              <a href="" class="sub-menu ">Last Sale</a>
+              <a href="" class="sub-menu">Airline Wise</a>
+              <a href="" class="sub-menu">Destination Wise</a>
+            </div>
+          </div>
+
+          <a href="profile.html" class="side-menu">
+            <img width="20" src="assets/icons/SVG/profile.svg" alt="" />
+            Profile
+          </a>
+        </ul>
+
+        <div class="bottom_user d-none d-md-block">
+          <div class="d-flex justify-content-between">
+            <img class="avater" src="assets/images/Shop logo.svg" />
+            <div>
+              <a href="/" class="auth">Shop</a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <span class="name">Moshe Shop</span>
+            <span class="email">shop_00@example.com</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!--************** Start Header Section ************-->
+        <div class="sticky-top w-100 top_navbar">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10 bg-white py-2 text-right">
+              <a href="#" id="toggle-btn" onclick="toggleSidebar()" class="btn toggle-sidebar">
+                <i class="fas fa-bars"></i>
+              </a>
+
+              <div class="multilanguage-section">
+                <a href="#" class="language active">EN</a>
+                <a href="#" class="language">IT</a>
+              </div>
+
+              <div class="left-header">
+                <div class="dropdown m-0">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="avater" src="assets/images/Shop logo.svg" alt="profile" />
+                  </button>
+                  <div class="dropdown-menu header-dropdown-menu card-shadow" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="change-password.html">
+                      <img src="assets//icons/SVG/key.svg" />
+                      Change Password
+                    </a>
+                    <a class="dropdown-item" href="#logout"
+                      onclick="event.preventDefault();document.getElementById('logout').submit()">
+                      <img src="assets/icons/SVG/logout.svg" />
+                      Log out
+                    </a>
+                    <form id="logout" action="login.html" method="POST"></form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--************** End Header Section ************-->
+
+        <div class="row">
+          <div class="col-lg-2 pr-0"></div>
+          <div class="col-lg-10 content body-color p-0 pb-2">
+            <div class="container-fluid">
+              <!--*********** Start Layout Section *************-->
+              <form action="#">
+                <div class="search_filterBox card card-body">
+                  <div class="row">
+                    <div class="col-md-9 col-lg-10">
+                      <div class="d-flex justify-content-start flex-wrap dropdown_section">
+                        <div class="selectBox">
+                          <select name="">
+                            <option value="Round-Trip">Round-Trip</option>
+                            <option value="One-Way">One-Way</option>
+                            <option value="Multi City">Multi City</option>
+                          </select>
+                        </div>
+
+                        <div class="selectBox">
+                          <select name="">
+                            <option value="Economy">Economy</option>
+                            <option value="Business">Business</option>
+                            <option value="First Class">First Class</option>
+                          </select>
+                        </div>
+
+                        <div class="dropdown passenger_luggeses">
+                          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div>
+                              <img src="assets//icons/passenger.svg" /> 2
+                            </div>
+                            <div>
+                              <img src="assets//icons/luggages.svg" /> 1
+                            </div>
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div class="passenger">
+                              <strong class="title">Passengers</strong>
+
+                              <div class="items">
+                                <p class="type">Adult <span>(16-64)</span></p>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>2</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+
+                              <div class="items">
+                                <p class="type">Senior <span>(65+)</span></p>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>0</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+
+                              <div class="items">
+                                <p class="type">Child <span>(2-15)</span></p>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>0</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="luggages">
+                              <div class="items">
+                                <strong class="title">Luggages</strong>
+                                <div class="actions">
+                                  <button><i class="fa fa-minus"></i></button>
+                                  <span>1</span>
+                                  <button><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="items d-flex justify-content-between mt-1">
+                              <button class="resetBtn">Reset</button>
+                              <button class="doneBtn">Done</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="searchInputSection">
+                        <div class="from_to">
+                          <input type="text" name="" class="form-control" placeholder="From Where?" />
+                          <input type="text" name="" class="form-control" placeholder="To Where?" />
+                          <div class="leftRightAngel">
+                            <img src="assets/icons/SVG/leftRight.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="serarch">
+                          <input type="date" name="" class="form-control" />
+                          <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-search"></i> Search Flight
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="row">
+                <div class="col-lg-10">
+                  <div class="flight_searching_result_sections mt-2">
+                    <div class="filtering_ticketShorting_box">
+
+                      <div class="totalFound">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h4>Filter Your Results</h4>
+                          <button class="reset">Reset</button>
+                        </div>
+                        <p>275 results found</p>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="title">Flexible Tickets</div>
+                        <div class="lable">
+                          <input type="checkbox" name="" id="Refundable">
+                          <label for="Refundable">Refundable</label>
+                        </div>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="title">Stops</div>
+                        <div class="lable">
+                          <input type="checkbox" name="" id="Direct">
+                          <label for="Direct">Direct</label>
+                        </div>
+                        <div class="lable">
+                          <input type="checkbox" name="" id="1Stop">
+                          <label for="1Stop">1 Stop</label>
+                        </div>
+                        <div class="lable">
+                          <input type="checkbox" name="" id="2Stop">
+                          <label for="2Stop">2+ Stop</label>
+                        </div>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="title">Price</div>
+                        <div class="lable">
+                          <input type="checkbox" name="" id="Direct">
+                          <label for="Direct">Direct</label>
+                        </div>
+                      </div>
+                      
+                      <div class="itemBox">
+                        <div class="title">Shift</div>
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Morning">
+                            <label for="Morning">Morning</label>
+                          </div>
+                          <span class="text-gray-400 font-12">06:00 - 12:00</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Day">
+                            <label for="Day">Day</label>
+                          </div>
+                          <span class="text-gray-400 font-12">12:00 - 05:00</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Evening">
+                            <label for="Evening">Evening</label>
+                          </div>
+                          <span class="text-gray-400 font-12">05:00 - 08:00</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Night">
+                            <label for="Night">Night</label>
+                          </div>
+                          <span class="text-gray-400 font-12">08:00 - 01:00</span>
+                        </div>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="title">Airlines</div>
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="British">
+                            <label for="British">British Airways</label>
+                          </div>
+                          <span class="text-gray font-12">€365.5</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Emirates">
+                            <label for="Emirates">Emirates</label>
+                          </div>
+                          <span class="text-gray font-12">€365.5</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Gulf">
+                            <label for="Gulf">Gulf Air</label>
+                          </div>
+                          <span class="text-gray font-12">€365.5</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="IndiGo">
+                            <label for="IndiGo">IndiGo</label>
+                          </div>
+                          <span class="text-gray font-12">€365.5</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between w-100 align-items-center">
+                          <div class="lable">
+                            <input type="checkbox" name="" id="Jazeera">
+                            <label for="Jazeera">Jazeera Airways</label>
+                          </div>
+                          <span class="text-gray font-12">€365.5</span>
+                        </div>
+                      </div>
+
+                      <div class="w-100">
+                          <button class="semoreBtn">Show More</button>
+                      </div>
+                    </div>
+
+                    <div class="searching_resultData_box">
+                      <div class="header">
+                          <ul class="nav nav-pills">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">
+                                Cheapest
+                                <div class="from">From $150.5</div>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                Recommended
+                                <div class="from">From $180.0</div>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                Best deal
+                                <div class="from">From $200.0</div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="resultData_content">
+
+                          <div class="flight">
+                            <div class="airline">
+                              <div class="logo">
+                                <img src="assets/images/airline1.png" alt="">
+                                <span class="name">Emirates</span>
+                              </div>
+                              <div class="from_to_duration">
+                                <div class="duration">
+                                  <span class="font-14 font-weight-bold">9:55</span>
+                                  <span class="font-12">01h 00m</span>
+                                  <span class="font-14 font-weight-bold">11:00</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fromTo">
+                                  <span class="font-14">DAC</span>
+                                  <span class="font-12">direct</span>
+                                  <span class="font-14">CXB</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="price_with_cta">
+                              <div class="price_box">
+                                <div class="price">€365.5</div>
+                                <span>per person</span>
+                                <span>(Incl. VAT+TAX)</span>
+                              </div>
+                              <div>
+                                <a class="btn select_btn" href="">
+                                  Select <img src="assets/icons/SVG/right.svg" width="18">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flight">
+                            <div class="airline">
+                              <div class="logo">
+                                <img src="assets/images/airline2.png">
+                                <span class="name">Singapore Airlines</span>
+                              </div>
+                              <div class="from_to_duration">
+                                <div class="duration">
+                                  <span class="font-14 font-weight-bold">9:55</span>
+                                  <span class="font-12">01h 00m</span>
+                                  <span class="font-14 font-weight-bold">11:00</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fromTo">
+                                  <span class="font-14">DAC</span>
+                                  <span class="font-12">direct</span>
+                                  <span class="font-14">CXB</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="price_with_cta">
+                              <div class="price_box">
+                                <div class="price">€365.5</div>
+                                <span>per person</span>
+                                <span>(Incl. VAT+TAX)</span>
+                              </div>
+                              <div>
+                                <a class="btn select_btn" href="">
+                                  Select <img src="assets/icons/SVG/right.svg" width="18">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flight">
+                            <div class="airline">
+                              <div class="logo">
+                                <img src="assets/images/airline3.png">
+                                <span class="name">Singapore Airlines</span>
+                              </div>
+                              <div class="from_to_duration">
+                                <div class="duration">
+                                  <span class="font-14 font-weight-bold">9:55</span>
+                                  <span class="font-12">01h 00m</span>
+                                  <span class="font-14 font-weight-bold">11:00</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fromTo">
+                                  <span class="font-14">DAC</span>
+                                  <span class="font-12">direct</span>
+                                  <span class="font-14">CXB</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="price_with_cta">
+                              <div class="price_box">
+                                <div class="price">€365.5</div>
+                                <span>per person</span>
+                                <span>(Incl. VAT+TAX)</span>
+                              </div>
+                              <div>
+                                <a class="btn select_btn" href="">
+                                  Select <img src="assets/icons/SVG/right.svg" width="18">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="flight">
+                            <div class="airline">
+                              <div class="logo">
+                                <img src="assets/images/airline1.png" alt="">
+                                <span class="name">Emirates</span>
+                              </div>
+                              <div class="from_to_duration">
+                                <div class="duration">
+                                  <span class="font-14 font-weight-bold">9:55</span>
+                                  <span class="font-12">01h 00m</span>
+                                  <span class="font-14 font-weight-bold">11:00</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fromTo">
+                                  <span class="font-14">DAC</span>
+                                  <span class="font-12">direct</span>
+                                  <span class="font-14">CXB</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="price_with_cta">
+                              <div class="price_box">
+                                <div class="price">€365.5</div>
+                                <span>per person</span>
+                                <span>(Incl. VAT+TAX)</span>
+                              </div>
+                              <div>
+                                <a class="btn select_btn" href="">
+                                  Select <img src="assets/icons/SVG/right.svg" width="18">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flight">
+                            <div class="airline">
+                              <div class="logo">
+                                <img src="assets/images/airline2.png">
+                                <span class="name">Singapore Airlines</span>
+                              </div>
+                              <div class="from_to_duration">
+                                <div class="duration">
+                                  <span class="font-14 font-weight-bold">9:55</span>
+                                  <span class="font-12">01h 00m</span>
+                                  <span class="font-14 font-weight-bold">11:00</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fromTo">
+                                  <span class="font-14">DAC</span>
+                                  <span class="font-12">direct</span>
+                                  <span class="font-14">CXB</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="price_with_cta">
+                              <div class="price_box">
+                                <div class="price">€365.5</div>
+                                <span>per person</span>
+                                <span>(Incl. VAT+TAX)</span>
+                              </div>
+                              <div>
+                                <a class="btn select_btn" href="">
+                                  Select <img src="assets/icons/SVG/right.svg" width="18">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flight">
+                            <div class="airline">
+                              <div class="logo">
+                                <img src="assets/images/airline3.png">
+                                <span class="name">Singapore Airlines</span>
+                              </div>
+                              <div class="from_to_duration">
+                                <div class="duration">
+                                  <span class="font-14 font-weight-bold">9:55</span>
+                                  <span class="font-12">01h 00m</span>
+                                  <span class="font-14 font-weight-bold">11:00</span>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fromTo">
+                                  <span class="font-14">DAC</span>
+                                  <span class="font-12">direct</span>
+                                  <span class="font-14">CXB</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="price_with_cta">
+                              <div class="price_box">
+                                <div class="price">€365.5</div>
+                                <span>per person</span>
+                                <span>(Incl. VAT+TAX)</span>
+                              </div>
+                              <div>
+                                <a class="btn select_btn" href="">
+                                  Select <img src="assets/icons/SVG/right.svg" width="18">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 mt-2">
+                  <img src="assets/images/ads.png" alt="" width="100%">
+                </div>
+              </div>
+
+
+              <!--******* End Layout Section ******-->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".flight_slider").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1250,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 321,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    });
+  </script>
+
+  <script>
+    function onlyNumber(evt) {
+      var chars = String.fromCharCode(evt.which);
+      if (!/[0-9]/.test(chars)) {
+        evt.preventDefault();
+      }
+    }
+
+    function onlyLetter(evt) {
+      var chars = String.fromCharCode(evt.which);
+      if (!/[a-z,A-Z]/.test(chars)) {
+        evt.preventDefault();
+      }
+    }
+  </script>
+</body>
+
+</html>
