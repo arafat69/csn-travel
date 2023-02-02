@@ -28,11 +28,11 @@
                         <img class="main-logo" src="assets/images/logo.svg" alt="" />
                     </a>
 
-                    <a href="flight.html" class="side-menu">
+                    <a href="index.html" class="side-menu active">
                         <img width="20" src="assets/icons/SVG/flight.svg" alt="" />Flight
                     </a>
 
-                    <a href="booking.html" class="side-menu active">
+                    <a href="booking.html" class="side-menu">
                         <img width="20" src="assets/icons/SVG/booking.svg" alt="" />
                         Booking
                     </a>
@@ -40,12 +40,25 @@
                         <img width="20" src="assets/icons/SVG/Wallet.svg" alt="" />
                         Wallet
                     </a>
-                    <a href="#" class="side-menu">
+
+                    <a href="#reports" class="side-menu active" data-toggle="collapse" role="button"
+                        aria-expanded="false" aria-controls="reports">
                         <img width="20" src="assets/icons/SVG/report.svg" alt="" />
-                        Reports
+                        <span class="d-flex justify-content-between align-items-center w-100">
+                            Reports
+                            <i class="fa fa-angle-down"></i>
+                        </span>
                     </a>
+                    <div class="reportMenu">
+                        <div class="collapse show" id="reports">
+                            <a href="reports.html" class="sub-menu active">Last Sale</a>
+                            <a href="" class="sub-menu">Airline Wise</a>
+                            <a href="" class="sub-menu">Destination Wise</a>
+                        </div>
+                    </div>
+
                     <a href="profile.html" class="side-menu">
-                        <img width="20" src="assets/images/ic-user (1).svg" alt="" />
+                        <img width="20" src="assets/icons/SVG/profile.svg" alt="" />
                         Profile
                     </a>
                 </ul>
@@ -81,10 +94,9 @@
 
                             <div class="left-header">
                                 <div class="dropdown m-0">
-                                    <img class="avater" src="assets/images/Shop logo.svg" alt="" />
                                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-expanded="false">
-                                        Profile Name
+                                        <img class="avater" src="assets/images/Shop logo.svg" alt="profile" />
                                     </button>
                                     <div class="dropdown-menu header-dropdown-menu card-shadow"
                                         aria-labelledby="dropdownMenuButton">
@@ -97,7 +109,7 @@
                                             <img src="assets/icons/SVG/logout.svg" />
                                             Log out
                                         </a>
-                                        <form id="logout" action="login.html" method="POST"></form>
+                                        <form id="logout" action="login.html" method="get"></form>
                                     </div>
                                 </div>
                             </div>
@@ -109,147 +121,151 @@
                 <div class="row">
                     <div class="col-lg-2 pr-0"></div>
                     <div class="col-lg-10 content body-color p-0 pb-2">
-                        <!--*********** Start Layout Section *************-->
-
                         <div class="mt-3 container-fluid px-lg-4">
-                            <span class="font-weight-bold">Passport Details</span>
+                            <!--*********** Start Layout Section *************-->
 
-                            <div class="row mt-2">
-                                <div class="col-md-7">
-                                    <div class="card rounded-8">
-                                        <div class="card-body">
-                                            <div class="Passport-content">
+                            <h3 class="header_title">Passport Details</h3>
+                            <form action="">
+                                <div class="row mt-2">
+                                    <div class="col-md-7">
+                                        <div class="card card-body">
+                                            <div class="passport-content">
                                                 <div class="passport-name">
                                                     <span class="">Mr. Manik Mia</span>
                                                 </div>
-                                                <div class="p-2">
-                                                    <div class="row">
-                                                        <div class="col-sm-2">
-                                                            <label for="">Title</label><br />
+                                                <div class="passport_details">
+                                                    <div class="inputPart">
+                                                        <div class="title">
+                                                            <label class="font-14 mb-1">Title</label><br />
                                                             <select class="form-control">
                                                                 <option value="mercedes">Mr.</option>
                                                                 <option value="audi">Mst.</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-sm-5">
-                                                            <label class="mb-1">First Name<span
+                                                        <div class="input">
+                                                            <label class="font-14 mb-1">First Name <span
                                                                     class="text-danger">*</span></label>
                                                             <input type="text" class="form-control"
                                                                 placeholder="Enter First Name" />
                                                         </div>
-                                                        <div class="col-sm-5">
-                                                            <label class="mb-1">Last Name<span
+                                                        <div class="input">
+                                                            <label class="font-14 mb-1">Last Name<span
                                                                     class="text-danger">*</span></label>
                                                             <input type="text" class="form-control"
                                                                 placeholder="Enter Last Name" />
                                                         </div>
+
                                                     </div>
 
-                                                    <div class="additional-info">
-                                                        <p>
-                                                            <a class="" data-toggle="collapse" href="#collapseExample"
-                                                                role="button" aria-expanded="false"
-                                                                aria-controls="collapseExample">Additional info</a>
-                                                        </p>
-                                                        <div class="collapse" id="collapseExample">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <label class="mb-1">Nationality</label>
-                                                                            <select class="form-control">
-                                                                                <option value="mercedes">Argentina</option>
-                                                                                <option value="mercedes">Bangladesh</option>
-                                                                                <option value="mercedes">Italy</option>
-                                                                                <option value="mercedes">United States</option>
-                                                                                <option value="mercedes">United Kingdom</option>
-                                                                                <option value="audi">Turkey</option>
-                                                                            </select>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <label class="mb-1">Date Of Birth</label>
-                                                                    <input type="date" class="form-control"
-                                                                        placeholder="Enter First Name" />
-                                                                </div>
+                                                    <button type="button" class="additionalInfoBtn"
+                                                        data-toggle="collapse" href="#additionalInfo">Additional
+                                                        info</button>
 
+                                                    <div class="collapse border-none" id="additionalInfo">
+                                                        <div class="row">
+                                                            <div class="col-md-6 mt-3">
+                                                                <label class="font-14 mb-1">Nationality</label>
+                                                                <select class="form-control">
+                                                                    <option value="mercedes">Argentina</option>
+                                                                    <option value="mercedes">Bangladesh</option>
+                                                                    <option value="mercedes">Italy</option>
+                                                                    <option value="mercedes">United States</option>
+                                                                    <option value="mercedes">United Kingdom</option>
+                                                                    <option value="audi">Turkey</option>
+                                                                </select>
                                                             </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-md-6">
-                                                                    <label class="mb-1">Passport Or ID Number</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter Passport Or ID Number" />
-                                                                </div>
-                                                                <div class="col-md-6 ">
-                                                                    <label class="mb-1">Expiration Date</label>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <input type="date" class="form-control"
-                                                                                    placeholder="Enter First Name" />
-                                                                            </div>
-                                                                            <div class="col-md-6 d-flex align-items-center">
-                                                                                <input type="checkbox" name="" id="">
-                                                                                <label class="m-0 gap-2 "> No expiration</label>
-                                                                            </div>
+
+                                                            <div class="col-md-6 mt-3">
+                                                                <label class="font-14 mb-1">Date Of Birth</label>
+                                                                <input type="date" class="form-control"
+                                                                    placeholder="Enter First Name" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mt-3">
+                                                                <label class="font-14 mb-1">Passport Or ID
+                                                                    Number</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Passport Or ID Number" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mt-3">
+                                                                <label class="font-14 mb-1">Expiration Date</label>
+                                                                <div class="row align-items-center">
+                                                                    <div class="col-md-6 col-lg-7">
+                                                                        <input type="date" class="form-control"
+                                                                            placeholder="Enter First Name" />
+                                                                    </div>
+                                                                    <div class="col-md-6 col-lg-5 mt-3 mt-md-0">
+                                                                        <div class="form-check-inline">
+                                                                            <input type="checkbox" name=""
+                                                                                class="form-check-input" id="noExpire">
+                                                                            <label class="form-check-label"
+                                                                                for="noExpire">
+                                                                                No expiration</label>
                                                                         </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </div>
 
-                                            <div class="passport-text">
-                                                <span class="">Mrs. Aysha Khatun
-                                                    <span class="btn age-button">Adult</span></span>
+                                            <div class="passport_item mt-3">
+                                                <div>Mrs. Aysha Khatun <span class="adult">Adult</span></div>
                                             </div>
-                                            <div class="passport-text">
-                                                <span class="">Rahat Khan
-                                                    <span class="btn age-button">Child</span></span>
+
+                                            <div class="passport_item mt-3">
+                                                <div>Rahat Khan <span class="adult">Child</span></div>
                                             </div>
-                                            <div class="pasport-button">
-                                                <a href="" class="btn button-pass text-dark"><img
-                                                        src="assets/icons/SVG/Vector.svg" alt="" />
-                                                    Back</a>
-                                                <a href="" class="btn button-pass">Submit</a>
+
+                                            <div class="mt-4 d-flex justify-content-between">
+                                                <a href="booking.html" class="goBack">
+                                                    <img src="assets/icons/SVG/left.svg" />
+                                                    Back
+                                                </a>
+                                                <button type="submit" class="btnAction">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Preview box section -->
+                                    <div class="col-md-5">
+                                        <div class="container-fluid">
+                                            <div class="previewBox d-flex justify-content-between flex-column">
+                                                <div>
+                                                    <div class="header">
+                                                        <span>Preview</span>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="preview-content">
+                                                            <label class="m-0">Full Name</label>
+                                                            <p>Mr. Manik Mia</p>
+                                                        </div>
+                                                        <div class="border_botton"></div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 item">
+                                                                <label>Title</label>
+                                                                <p id="company_name_prv">--</p>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 item">
+                                                                <label>First Name</label>
+                                                                <p id="cf_prv">--</p>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 item">
+                                                                <label>Last Name</label>
+                                                                <p id="vat_id_prv">--</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                    <div class="col-md-5">
-                                        <div class="container-fluid">
-                                            <form action="" method="POST">
-                                                <div class="previewBox d-flex justify-content-between flex-column">
-                                                    <div>
-                                                        <div class="header">
-                                                            <span>Preview</span>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <div class="preview-content">
-                                                                <label class="m-0">Full Name</label>
-                                                                <p>Mr. Manik Mia</p>
-                                                            </div>
-                                                            <div class="border_botton"></div>
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-md-6 col-sm-6 item">
-                                                                    <label>Title</label>
-                                                                    <p id="company_name_prv">--</p>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-md-6 col-sm-6 item">
-                                                                    <label>First Name</label>
-                                                                    <p id="cf_prv">--</p>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-6 col-sm-6 item">
-                                                                    <label>Last Name</label>
-                                                                    <p id="vat_id_prv">--</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                            </div>
+                            </form>
 
                             <!--******* End Layout Section ******-->
                         </div>

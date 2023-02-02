@@ -109,7 +109,7 @@
                       <img src="assets/icons/SVG/logout.svg" />
                       Log out
                     </a>
-                    <form id="logout" action="login.html" method="POST"></form>
+                    <form id="logout" action="login.html" method="get"></form>
                   </div>
                 </div>
               </div>
@@ -674,7 +674,7 @@
                       </div>
 
                       <div class="mt-3">
-                        <button class="btn default-bg text-white w-100">
+                        <button class="SubmitBtn w-100 default-bg text-white" data-toggle="modal" data-target="#confirmModal">
                           Confirm Booking
                         </button>
                       </div>
@@ -682,6 +682,25 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Modal Confirm-->
+              <div class="modal fade" id="confirmModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="confirmed_message_box text-center align-items-center">
+                        <div class="modal_check">
+                          <img src="assets//icons/SVG/ok_check.svg" width="30">
+                        </div>
+                        <h3 class="title text-center">Booked successfully</h3>
+                        <p class="descriptipons text-center">Successfully booked the ticket, it is now under review by the wholesale.</p>
+                        <a href="index.html" class="btn default-bg text-white font-14 font-weight-bold">Go to dashboard</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <!--******* End Layout Section ******-->
             </div>
           </div>
