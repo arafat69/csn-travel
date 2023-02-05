@@ -15,7 +15,7 @@ body {
 
 .btn-check {
     position: absolute;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     pointer-events: none;
 }
 
@@ -589,6 +589,10 @@ input:checked+.slider:before {
 
 .font-16 {
     font-size: 16px;
+}
+
+.font-18 {
+    font-size: 18px;
 }
 
 .form-control:focus {
@@ -2433,9 +2437,13 @@ table.dataTable thead .sorting_desc_disabled:before {
         flex-wrap: wrap;
     }
 
-    .searchInputSection .serarch button {
+    .searchInputSection .serarch button, .destination .action_btn{
         width: 100%;
     }
+}
+
+.destination.searchInputSection .serarch .item{
+    flex-grow: 1;
 }
 
 .flight_slider .items {
@@ -3245,6 +3253,10 @@ table.dataTable thead .sorting_desc_disabled:before {
     line-height: 28px;
     color: #111827;
 }
+.header_title a{
+    color: #111827;
+    text-decoration: none;
+}
 
 .booking_header {
     background: #FFFFFF;
@@ -3386,7 +3398,8 @@ table.dataTable thead .sorting_desc_disabled:before {
     color: #111827 !important;
 }
 
-.issue_ticket_section, .payment_method {
+.issue_ticket_section,
+.payment_method {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -3442,10 +3455,12 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-size: 14px;
     cursor: pointer;
 }
-.payment_method .method .type{
+
+.payment_method .method .type {
     display: flex;
     gap: 16px;
 }
+
 .payment_method .method .chackBox {
     display: flex;
     justify-content: center;
@@ -3464,24 +3479,26 @@ table.dataTable thead .sorting_desc_disabled:before {
     border-radius: 50%;
 }
 
-.btn-check:checked+.method .chackBox{
-    border: 2px solid  var(--default-color);
+.btn-check:checked+.method .chackBox {
+    border: 2px solid var(--default-color);
 }
 
-.btn-check:checked+.method .chackBox .dot{
+.btn-check:checked+.method .chackBox .dot {
     background: var(--default-color);
 }
-.card-owner{
+
+.card-owner {
     border-bottom: 2px dashed #6B7280;
     padding-bottom: 24px;
 }
-.cardDetails{
+
+.cardDetails {
     border-left: 4px solid #E5E7EB !important;
     padding-left: 20px !important;
     margin-top: 16px;
 }
 
-.info{
+.info {
     padding: 16px 0px;
     display: flex;
     justify-content: space-between;
@@ -3490,25 +3507,25 @@ table.dataTable thead .sorting_desc_disabled:before {
 }
 
 
-.filtaring-section{
+.filtaring-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
     justify-content: space-between;
     margin-bottom: 22px;
 }
 
-.filtaring-section .item{
+.filtaring-section .item {
     flex-grow: 1;
 }
 
-.mini-text{
+.mini-text {
     font-size: 14px;
     color: #6B7280;
     font-weight: 200;
 }
 
-.filterBtn{
+.filterBtn {
     width: 44px;
     height: 42px;
     border: 1px solid #D1D5DB;
@@ -3518,21 +3535,25 @@ table.dataTable thead .sorting_desc_disabled:before {
     justify-content: center;
 }
 
-.filtaring-section .search-box{
+.filtaring-section .search-box {
     min-width: 20%;
 }
-.filtaring-section .search-box .form-control{
+
+.filtaring-section .search-box .form-control {
     background: #F3F4F6 !important;
     border: 1px solid #E5E7EB;
     border-radius: 4px;
 }
-.sort-list{
-    width: 140px; 
+
+.sort-list {
+    width: 140px;
 }
-.date-box{
-    min-width: 35%; 
+
+.date-box {
+    min-width: 35%;
 }
-.filtaring-section .action_btn button{
+
+.action_btn button {
     width: 125px;
     background: #0E7490;
     background: #0E7490;
@@ -3542,52 +3563,150 @@ table.dataTable thead .sorting_desc_disabled:before {
     color: #fff;
     font-size: 14px;
 }
-@media (max-width: 768px){
-    .filtaring-section .action_btn{
-       flex-grow: 1;
+
+@media (max-width: 768px) {
+    .filtaring-section .action_btn {
+        flex-grow: 1;
     }
-    .filtaring-section .action_btn button{
+
+    .filtaring-section .action_btn button {
         width: 100%;
-     }
-     .sort-list{
-        width: 100%; 
+    }
+
+    .sort-list {
+        width: 100%;
         flex-grow: 1;
     }
 }
 
-.thead-bg{
+.thead-bg {
     background: #F3F4F6;
 }
-.table td, .table th{
+
+.table td,
+.table th {
     font-size: 14px;
     color: #111827;
     border-top: 0;
 }
-.table th{
+
+.table th {
     border: none !important;
 }
-.table td{
+
+.table td {
     border-bottom: 1px solid #D1D5DB !important;
 }
+.table.table-borderless td {
+    border-bottom: 0 !important;
+}
 
-.card-content{
+.card-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card-content .year-list{
+
+.card-content .year-list {
     color: #111827;
     font-size: 14px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
 }
-.card-content .card-title h5{
+
+.card-content .card-title h5 {
     color: #111827;
     font-size: 16px;
     font-weight: 600;
 }
-.card-content .card-title p{
+
+.card-content .card-title p {
     color: #4F4F4F;
     font-size: 14px;
+}
+
+.visaWalet {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 32px;
+    background-image: url('../images/visa.svg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #FFFFFF;
+}
+
+.visaWalet .amount {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.visaWalet .cardNumber {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.visaWalet .card_holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visaWalet .card_holder .name {
+    text-transform: uppercase;
+    width: 60%;
+}
+
+.visaWalet .card_holder .expire {
+    width: 40%;
+}
+
+.saleBox h3 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #111827;
+    margin-top: 30px;
+}
+
+.saleBox .increase {
+    padding: 8px 12px;
+    background: rgba(8, 145, 178, 0.1);
+    border-radius: 18px;
+    font-size: 14px;
+    color: var(--default-color);
+    display: flex;
+    gap: 8px;
+}
+.saleBox .decrease {
+    padding: 8px 12px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 18px;
+    font-size: 14px;
+    color: #EF4444;
+    display: flex;
+    gap: 8px;
+}
+.text-lime{
+    color: #84CC16;
+}
+
+.topAirline .itemBox{
+    border-bottom: 1px solid #F3F4F6;
+    padding-bottom: 12px;
+}
+.topAirline .itemBox .airline{
+    display: flex;
+    gap: 8px;
+}
+.topAirline .itemBox .airline img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
 }
