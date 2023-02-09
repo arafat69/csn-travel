@@ -130,29 +130,147 @@
                   <div class="card card-body">
                     <div class="issue_ticket_section">
                       <div class="header">
-                        <h4>Personal Information</h4>
+                        <h4>Passenger Basic Info</h4>
                         <p>Please confirm all information before completing transaction.</p>
                       </div>
                       <div class="body">
-                        <div class="item">
-                          <span>Full Name</span>
-                          <span>Mr. Mahfuz Khan</span>
-                        </div>
-                        <div class="item">
-                          <span>Email</span>
-                          <span>mahfuz@exampl.com</span>
-                        </div>
-                        <div class="item">
-                          <span>Phone</span>
-                          <span>+8801768572658</span>
-                        </div>
-                        <div class="item">
-                          <span>Address</span>
-                          <span>Mohammadpur, Dhaka</span>
+                        <div class="row">
+                          <div class="col-md-6 mb-3">
+                            <label class="font-14 text-gray mb-1">Full Name</label>
+                            <p class="m-0 font-14">Mr. Mahfuz Khan</p>
+                          </div>
+
+                          <div class="col-md-6 mb-3">
+                            <label class="font-14 text-gray mb-1">Email</label>
+                            <p class="m-0 font-14">mahfuz@exampl.com</p>
+                          </div>
+
+                          <div class="col-md-6 mb-3">
+                            <label class="font-14 text-gray mb-1">Phone</label>
+                            <p class="m-0 font-14">+8801768572658</p>
+                          </div>
+
+                          <div class="col-md-6 mb-3">
+                            <label class="font-14 text-gray mb-1">Address</label>
+                            <p class="m-0 font-14">Mohammadpur, Dhaka</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <div class="flightDetails mt-3">
+                    <button class="rounded-8" data-toggle="collapse" href="#collapseExample">
+                      <div class="title">Flight details</div>
+                      <div class="arrow">
+                        <img src="assets/icons/SVG/arrow-up.svg" />
+                      </div>
+                    </button>
+                    <div class="collapse details show" id="collapseExample">
+                      <div class="details_content rounded-8">
+                        <div class="classAndPlace">
+                          <div class="from_to">
+                            <span class="font-14">DAC</span>
+                            <img src="assets/icons/SVG/right-black.svg" />
+                            <span class="font-14">CXB</span>
+                          </div>
+                          <div class="class">Economy</div>
+                        </div>
+                        <div class="flight">
+                          <div class="airline">
+                            <div class="logo">
+                              <img src="assets/images/airline1.png" alt="" />
+                              <div>
+                                <span class="name">Emirates</span>
+                                <p class="m-0 text-gray font-12">
+                                  BS 153 | AT7
+                                </p>
+                              </div>
+                            </div>
+                            <div class="from_to_duration">
+                              <div class="duration">
+                                <span class="font-14 font-weight-bold">9:55</span>
+                                <span class="font-12">01h 00m</span>
+                                <span class="font-14 font-weight-bold">11:00</span>
+                              </div>
+                              <div class="line"></div>
+                              <div class="fromTo">
+                                <span class="font-14">DAC</span>
+                                <span class="font-12">direct</span>
+                                <span class="font-14">CXB</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-body mt-3">
+                    <div class="fare_summery">
+                      <div class="title">Fare Summary</div>
+
+                      <div class="itemBox">
+                        <p class="m-0 font-14">
+                          Adult<span>x</span> <span>2 Passenger</span>
+                        </p>
+                      </div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14">Passenger 2 name</p>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14">TAX</p>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+
+                      <div class="itemBox">
+                        <p class="m-0 font-14">
+                          Child<span>x</span> <span>1 Passenger</span>
+                        </p>
+                      </div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14">Passenger 3 name</p>
+                        <p class="m-0 font-14 font-weight-bold">195.5</p>
+                      </div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14">TAX</p>
+                        <p class="m-0 font-14 font-weight-bold">€42</p>
+                      </div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14">
+                          Checked baggage + Lost baggage protection
+                        </p>
+                        <p class="m-0 font-14 font-weight-bold">€346.6</p>
+                      </div>
+
+                      <div class="divider"></div>
+
+                      <div class="itemBox">
+                        <p class="m-0 font-14">Sub-Total</p>
+                        <p class="m-0 font-14 font-weight-bold">
+                          €1273.5
+                        </p>
+                      </div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14 text-danger">Discount</p>
+                        <p class="m-0 font-14 font-weight-bold text-danger">
+                          €73.5
+                        </p>
+                      </div>
+                      <div class="border-top border-dark"></div>
+                      <div class="itemBox">
+                        <p class="m-0 font-14">
+                          Total Payable
+                          <span class="text-gray">(for 3 Passengers)</span>
+                        </p>
+                        <p class="m-0 font-14 font-weight-bold">
+                          €1245.0
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
                 <!-- Payment Method card -->
@@ -236,7 +354,8 @@
                           </div>
                         </div>
 
-                        <button class="SubmitBtn default-bg text-white" type="button" data-toggle="modal" data-target="#confirmModal">Confirm & Pay</button>
+                        <button class="SubmitBtn default-bg text-white" type="button" data-toggle="modal"
+                          data-target="#confirmModal">Confirm & Pay</button>
                       </div>
                     </div>
                   </form>
@@ -271,7 +390,8 @@
                             <span>59895625323</span>
                           </div>
                         </div>
-                        <a href="booking.html" class="btn default-bg text-white font-14 font-weight-bold">View Ticket</a>
+                        <a href="booking.html" class="btn default-bg text-white font-14 font-weight-bold">View
+                          Ticket</a>
                       </div>
                     </div>
                   </div>
