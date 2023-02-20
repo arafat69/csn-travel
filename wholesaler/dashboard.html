@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/datatables.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/all.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/select2.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/daterangepicker.css" />
+  <title>CSN Travel</title>
+</head>
+
+<body>
+  <section>
+    <div class="container-fluid">
+      <aside class="sidebar-wrap hide" id="sidebar">
+        <ul>
+          <a href="index.html" class="py-3 logo position-relative d-block mb-4">
+            <img class="main-logo" src="../assets/images/logo.svg" alt="logo" />
+          </a>
+
+          <a href="dashboard.html" class="side-menu active">
+            <img width="20" src="../assets/icons/SVG/dashboard.svg" alt="icon" />Dashboard
+          </a>
+
+          <a href="booking.html" class="side-menu">
+            <img width="20" src="../assets/icons/SVG/booking.svg" alt="" />
+            Booking
+          </a>
+          <a href="wallet.html" class="side-menu">
+            <img width="20" src="../assets/icons/SVG/Wallet.svg" alt="" />
+            Wallet
+          </a>
+
+          <a href="#reports" class="side-menu" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="reports">
+            <img width="20" src="../assets/icons/SVG/report.svg" alt="" />
+            <span class="d-flex justify-content-between align-items-center w-100">
+              Reports
+              <i class="fa fa-angle-down"></i>
+            </span>
+          </a>
+          <div class="reportMenu">
+            <div class="collapse" id="reports">
+              <a href="report-last-sale.html" class="sub-menu">Last Sale</a>
+              <a href="report-airline-wise.html" class="sub-menu">Airline Wise</a>
+              <a href="report-destitation-wise.html" class="sub-menu">Destination Wise</a>
+            </div>
+          </div>
+
+          <a href="profile.html" class="side-menu">
+            <img width="20" src="../assets/icons/SVG/profile.svg" alt="" />
+            Profile
+          </a>
+          <!-- Configaration -->
+          <div class="border-top mb-2"></div>
+          <a href="configaration.html" class="side-menu">
+            <img width="20" src="../assets/icons/SVG/configuration.svg" alt="" />
+            Configuration
+          </a>
+
+        </ul>
+
+        <div class="bottom_user d-none d-md-block">
+          <div class="d-flex justify-content-between">
+            <img class="avater" src="../assets/images/Shop logo.svg" />
+            <div>
+              <a href="/" class="auth">Wholesaler</a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <span class="name">Moshe Shop</span>
+            <span class="email">shop_00@example.com</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!--************** Start Header Section ************-->
+        <div class="sticky-top w-100 top_navbar">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10 bg-white py-2 text-right">
+              <a href="#" id="toggle-btn" onclick="toggleSidebar()" class="btn toggle-sidebar">
+                <i class="fas fa-bars"></i>
+              </a>
+
+              <div class="multilanguage-section">
+                <a href="#" class="language active">EN</a>
+                <a href="#" class="language">IT</a>
+              </div>
+
+              <div class="left-header">
+                <div class="dropdown m-0">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="avater" src="../assets/images/Shop logo.svg" alt="profile" />
+                  </button>
+                  <div class="dropdown-menu header-dropdown-menu card-shadow" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="change-password.html">
+                      <img src="../assets//icons/SVG/key.svg" />
+                      Change Password
+                    </a>
+                    <a class="dropdown-item" href="#logout"
+                      onclick="event.preventDefault();document.getElementById('logout').submit()">
+                      <img src="../assets/icons/SVG/logout.svg" />
+                      Log out
+                    </a>
+                    <form id="logout" action="login.html" method="GET"></form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--************** End Header Section ************-->
+
+        <div class="row">
+          <div class="col-lg-2 pr-0"></div>
+          <div class="col-lg-10 content body-color p-0 pb-2">
+            <div class="container-fluid">
+              <!--*********** Start Layout Section *************-->
+              <div class="row">
+                <div class="col-lg-9 mt-4">
+                  <div class="card card-body">
+                    <div class="row">
+
+                      <div class="col-xl-4">
+                        <div class="dashboard_item">
+                          <div>
+                            <span class="title">Total Earning </span>
+                            <h4 class="number">€12,605.75</h4>
+                          </div>
+                          <div>
+                            <img src="../assets/icons/SVG/money.svg">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-4 mt-3 mt-xl-0">
+                        <div class="dashboard_item">
+                          <div>
+                            <span class="title">Total Reseller</span>
+                            <h4 class="number">75</h4>
+                          </div>
+                          <div>
+                            <img src="../assets/icons/SVG/shop.svg">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-4 mt-3 mt-xl-0">
+                        <div class="dashboard_item">
+                          <div>
+                            <span class="title">Today's Booking </span>
+                            <h4 class="number">41</h4>
+                          </div>
+                          <div>
+                            <img src="../assets/icons/SVG/ticket.svg">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="card card-body mt-4">
+                    <div class="header d-flex justify-content-between flex-wrap align-items-center">
+                      <h5 class="title">Rop 10 Reseller (February)</h5>
+                      <select name="" class="reselerSelectBox form-control">
+                        <option value="">February</option>
+                        <option value="">February</option>
+                        <option value="">February</option>
+                      </select>
+                    </div>
+                    <div class="topReseler_report">
+                      <div class="topTenReseler_section">
+
+                        <div class="topTenReseler reseler_1">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">1</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_2">
+                          <p class="name">RM Assistenza test etatgary</p>
+                          <div class="serial">2</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_3">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">3</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_4">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">4</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_5">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">5</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_6">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">6</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_7">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">7</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_8">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">8</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_9">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">9</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="topTenReseler reseler_10">
+                          <p class="name">RM Assistenza</p>
+                          <div class="serial">10</div>
+                          <div class="hover_content">
+                            <h4 class="font-18">RM Assistenza</h4>
+                            <div class="detail">
+                              <div class="item">
+                                <span>Total Booked:</span>
+                                <span>68</span>
+                              </div>
+                              <div class="item">
+                                <span>Total Earned:</span>
+                                <span>€2040.0</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-body mt-3">
+                    <div class="header d-flex justify-content-between flex-wrap align-items-center">
+                      <h5 class="title">Newest Reseller</h5>
+                      <a href="#" class="default-color pl-2">View All</a>
+                    </div>
+
+                    <div class="table-responsive mt-2">
+                      <table class="table newReselerTable">
+                        <thead class="thead-bg">
+                          <tr>
+                            <th>Date</th>
+                            <th>ID</th>
+                            <th>Shop Name</th>
+                            <th>Fiscal Code</th>
+                            <th>Balance</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>12 Sep, 2022 18:13pm</td>
+                            <td>000044</td>
+                            <td>
+                              <img class="shopLogo" src="../assets/images/shopLogo.svg">
+                              <span class="shop_name">Arthur Shop	</span>
+                            </td>
+                            <td>rOGtKB4vi2jpaRX1</td>
+                            <td>Balance: €60.5</td>
+                            <td style="width: 50px;">
+                              <a href="#"><img src="../assets/icons/SVG/eye.svg" alt=""></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>12 Sep, 2022 18:13pm</td>
+                            <td>000044</td>
+                            <td>
+                              <img class="shopLogo" src="../assets/images/shopLogo.svg">
+                              <span class="shop_name">Arthur Shop	</span>
+                            </td>
+                            <td>rOGtKB4vi2jpaRX1</td>
+                            <td>Balance: €60.5</td>
+                            <td style="width: 50px;">
+                              <a href="#"><img src="../assets/icons/SVG/eye.svg" alt=""></a>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card card-body mt-4">
+                    <div class="dashboard_items saleBox">
+                      <div class="d-flex justify-content-between w-100">
+                        <span>Today's Sale</span>
+                        <div class="percent increase">
+                          +10.25 %
+                        </div>
+                      </div>
+                      <h4>€865.5</h4>
+                    </div>
+
+                    <div class="dashboard_items mt-3">
+                      <span>Today's Booking </span>
+                      <h4>41</h4>
+                    </div>
+
+                    <div class="dashboard_items mt-3">
+                      <span>Expiring Booking</span>
+                      <h4>02</h4>
+                    </div>
+                  </div>
+
+                  <div class="card card-body mt-3">
+                    <div class="fare_summery topAirline">
+                      <div class="title mb-2">Top 10 Airline</div>
+
+                      <div class="itemBox">
+                        <div class="airline">
+                          <img src="../assets/images/airline1.png">
+                          <div>
+                            <p class="m-0 font-14 font-weight-bold">Emirates</p>
+                            <p class="m-0 font-14">120</p>
+                          </div>
+                        </div>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="airline">
+                          <img src="../assets/images/airline2.png">
+                          <div>
+                            <p class="m-0 font-14 font-weight-bold">Qatar Airways</p>
+                            <p class="m-0 font-14">120</p>
+                          </div>
+                        </div>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="airline">
+                          <img src="../assets/images/airline3.png">
+                          <div>
+                            <p class="m-0 font-14 font-weight-bold">Turkish Airlines</p>
+                            <p class="m-0 font-14">120</p>
+                          </div>
+                        </div>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="airline">
+                          <img src="../assets/images/airline2.png">
+                          <div>
+                            <p class="m-0 font-14 font-weight-bold">Singapore Airlines</p>
+                            <p class="m-0 font-14">120</p>
+                          </div>
+                        </div>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+
+                      <div class="itemBox">
+                        <div class="airline">
+                          <img src="../assets/images/airline1.png">
+                          <div>
+                            <p class="m-0 font-14 font-weight-bold">Emirates</p>
+                            <p class="m-0 font-14">120</p>
+                          </div>
+                        </div>
+                        <p class="m-0 font-14 font-weight-bold">€365.5</p>
+                      </div>
+
+                      <button class="btn border font-14">View All</button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!--******* End Layout Section ******-->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <script src="../assets/js/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/moment.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/select2.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/datatables.min.js"></script>
+
+</body>
+
+</html>
