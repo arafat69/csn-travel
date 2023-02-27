@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/datatables.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/select2.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/calendarTheme.css" />
+    <link rel="stylesheet" href="../assets/css/calendarStyle.css" />
+    <title>CSN Travel</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <aside class="sidebar-wrap hide" id="sidebar">
+                <ul>
+                    <a href="index.html" class="py-3 logo position-relative d-block mb-4">
+                        <img class="main-logo" src="../assets/images/logo.svg" alt="" />
+                    </a>
+
+                    <a href="dashboard.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/dashboard.svg" alt="icon" />Dashboard
+                      </a>
+
+                    <a href="booking.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/booking.svg" alt="" />
+                        Booking
+                    </a>
+                    <a href="#" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/Wallet.svg" alt="" />
+                        Wallet
+                    </a>
+
+                    <a href="#reports" class="side-menu" data-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="reports">
+                        <img width="20" src="../assets/icons/SVG/report.svg" alt="" />
+                        <span class="d-flex justify-content-between align-items-center w-100">
+                            Reports
+                            <i class="fa fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <div class="reportMenu">
+                        <div class="collapse" id="reports">
+                            <a href="report-last-sale.html" class="sub-menu">Last Sale</a>
+                            <a href="report-airline-wise.html" class="sub-menu">Airline Wise</a>
+                            <a href="report-destitation-wise.html" class="sub-menu">Destination Wise</a>
+                        </div>
+                    </div>
+
+                    <a href="profile.html" class="side-menu active">
+                        <img width="20" src="../assets/icons/SVG/profile.svg" alt="" />
+                        Profile
+                    </a>
+
+                 <!-- Configaration -->
+          <div class="border-top mb-2"></div>
+          <a href="configaration.html" class="side-menu">
+            <img width="20" src="../assets/icons/SVG/configuration.svg" alt="" />
+            Configuration
+          </a>
+
+        </ul>
+
+        <div class="bottom_user d-none d-md-block">
+          <div class="d-flex justify-content-between">
+            <img class="avater" src="../assets/images/Shop logo.svg" />
+            <div>
+              <a href="/" class="auth">Wholesaler</a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <span class="name">Moshe Shop</span>
+            <span class="email">shop_00@example.com</span>
+          </div>
+        </div>
+            </aside>
+
+            <main class="main-content">
+                <!--************** Start Header Section ************-->
+                <div class="sticky-top w-100 top_navbar">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-10 bg-white py-2 text-right">
+                            <a href="#" id="toggle-btn" onclick="toggleSidebar()" class="btn toggle-sidebar">
+                                <i class="fas fa-bars"></i>
+                            </a>
+
+                            <div class="multilanguage-section">
+                                <a href="#" class="language active">EN</a>
+                                <a href="#" class="language">IT</a>
+                            </div>
+
+                            <div class="left-header">
+                                <div class="dropdown m-0">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-expanded="false">
+                                        <img class="avater" src="../assets/images/Shop logo.svg" alt="profile" />
+                                    </button>
+                                    <div class="dropdown-menu header-dropdown-menu card-shadow"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="change-password.html">
+                                            <img src="../assets//icons/SVG/key.svg" />
+                                            Change Password
+                                        </a>
+                                        <a class="dropdown-item" href="#logout"
+                                            onclick="event.preventDefault();document.getElementById('logout').submit()">
+                                            <img src="../assets/icons/SVG/logout.svg" />
+                                            Log out
+                                        </a>
+                                        <form id="logout" action="login.html" method="get"></form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--************** End Header Section ************-->
+
+                <div class="row">
+                    <div class="col-lg-2 pr-0"></div>
+                    <div class="col-lg-10 content body-color p-0 pb-2">
+                        <div class="mt-3 container-fluid px-lg-4">
+                            <!--*********** Start Layout Section *************-->
+
+
+                            <div class="card rounded-8 border-0">
+                                <div class="card-body">
+                                    <div class="card_details_profile">
+                                        <div class="profile">
+                                            <img src="../assets/images/Shop logo.svg" alt="photo">
+                                            <a href="#" class="profile_photo_change_icon">
+                                                <img src="../assets/icons/SVG/camera.svg">
+                                            </a>
+                                        </div>
+                                        <div class="profiile_details w-100">
+                                            <div
+                                                class="name_edit_box d-flex justify-content-between align-items-center">
+                                                <span class="name">Moshe Shop</span>
+                                                <a href="" class="editBtn">
+                                                    <img src="../assets/images/ic-edit.svg" alt="edit">
+                                                    Edit Profile
+                                                </a>
+                                            </div>
+                                            <div class="email text-gray">
+                                                shop_00@example.com
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top"></div>
+
+                                <div class="row">
+                                    <div class="col-md-6 pr-md-0 border-right">
+                                        <div class="card-body">
+                                            <div class="box_content_height2">
+                                                <div>
+                                                    <span class="font-weight-bold">Personal Information</span>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Cell
+                                                            Number</label>
+                                                        <span>+12517918588
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Tax Code (CF)</label>
+                                                        <span>VAxzaRmYbIPcUY8L
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Genre</label>
+                                                        <span>Male</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">County of Birth</label>
+                                                        <span>Nuro</span>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">City of
+                                                            Birth</label>
+                                                        <span>Sunflower
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Citizenship</label>
+                                                        <span>Gibuti</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Telephone Number
+                                                            (optional)</label>
+                                                        <span>+19196134718</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mt-3">
+                                                    <div class="border-dash"></div>
+                                                </div>
+
+                                                <div class="col-12 mt-2">
+                                                    <p class="default-color m-0 font-weight-bold">Address
+                                                        Information</p>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">Address</label>
+                                                    <span>86737 Steuber Crescent Suite 012 New Mozelle, UT
+                                                        00442-8898</span>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">Province of
+                                                        Residence</label>
+                                                    <span>Asti</span>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">City of
+                                                        Residence</label>
+                                                    <span>Portacomaro</span>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">Post_code</label>
+                                                    <span>824582430</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 pl-md-0">
+                                        <div class="card-body">
+                                            <div class="box_content_height">
+                                                <div>
+                                                    <span class="font-weight-bold">Business Information</span>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Company
+                                                            Name</label>
+                                                        <span>Individual firm</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Company
+                                                            Type</label>
+                                                        <span>Lubowitz, Purdy and Hansen </span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Vat ID</label>
+                                                        <span>29312177</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Business
+                                                            Phone</label>
+                                                        <span>+17864160963</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Business Mobile
+                                                            Phone</label>
+                                                        <span>+13084563276</span>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-md-12 mt-3">
+                                                        <label class="d-block text-gray mb-0">Business
+                                                            Email</label>
+                                                        <span>mkoepp@gmail.com</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mt-3">
+                                                    <div class="border-dash"></div>
+                                                </div>
+
+                                                <div class="col-12 mt-2">
+                                                    <p class="default-color m-0 font-weight-bold">Address
+                                                        Information</p>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">Address</label>
+                                                    <span>43746 Jana Rue South Victorside, MI 26450</span>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">Province of
+                                                        Residence</label>
+                                                    <span>Agrigento</span>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 mt-2">
+                                                    <label class="d-block text-gray mb-0">City of
+                                                        Residence</label>
+                                                    <span>Montevago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--******* End Layout Section ******-->
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/calendar.min.js"></script>
+    <script>
+        $(function () {
+            $(".calendar-container").calendar({
+                prevButton: '<i class="fas fa-angle-left"></i>',
+                nextButton: '<i class="fas fa-angle-right"></i>',
+            });
+        });
+
+        var x = document.getElementById("snackbar");
+        x.classList.add("show");
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    </script>
+    <script>
+        window.addEventListener("show-modal", (event) => {
+            $("#alert").modal("show");
+            $("#modal").modal("show");
+        });
+        window.addEventListener("hide-modal", (event) => {
+            $("#alert").modal("hide");
+            $("#modal").modal("hide");
+        });
+        $(document).ready(function () {
+            $("#confirm-modal").modal("show");
+        });
+    </script>
+
+    <script>
+        function onlyNumber(evt) {
+            var chars = String.fromCharCode(evt.which);
+            if (!/[0-9]/.test(chars)) {
+                evt.preventDefault();
+            }
+        }
+
+        function onlyLetter(evt) {
+            var chars = String.fromCharCode(evt.which);
+            if (!/[a-z,A-Z]/.test(chars)) {
+                evt.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>
