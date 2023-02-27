@@ -166,10 +166,13 @@
                                         <span>Primary Color</span>
                                         <button>Reset</button>
                                     </div>
-                                    <div class="brand_color_box">
-                                        <div class="colorBox" id="colorBox"></div>
-                                        <button class="btn default-bg text-white py-2 px-4">Save & Change</button>
-                                    </div>
+                                    <form action="">
+                                        <div class="brand_color_box">
+                                            <input type="text" name="" id="brandColor" style="display: none;">
+                                            <div class="colorBox" id="colorBox"></div>
+                                            <button class="btn default-bg text-white py-2 px-4">Save & Change</button>
+                                        </div>
+                                    </form>
 
                                     <div class="font-18 my-3">Choose Color</div>
                                     <div class="color_picker_section">
@@ -411,7 +414,8 @@
 
     <script>
         function setColor(color) {
-            document.getElementById('colorBox').style.background= color;
+            document.getElementById('colorBox').style.background = color;
+            document.getElementById('colorBox').style.background = color;
             document.querySelector('.default-bg').style.background = color;
         }
     </script>
