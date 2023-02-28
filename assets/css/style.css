@@ -3640,7 +3640,6 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 .booking_header .item {
     flex-grow: 1;
-    width: 200px;
 }
 
 .booking_header .status {
@@ -3663,6 +3662,20 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-weight: 400;
 }
 
+.table.ReselerTable{
+    border-collapse: separate;
+    border-spacing: 0 4px;
+}
+.table.ReselerTable tr{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+.table.ReselerTable tr td{
+    border: none !important;
+}
+
 .table.bookingTable tr td {
     border-top: 0;
 }
@@ -3678,6 +3691,10 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 .table.bookingTable .logo {
     min-width: 80px;
+    border-right: 1px solid #F3F4F6;
+}
+.table.bookingTable .booking {
+    min-width: 100px;
     border-right: 1px solid #F3F4F6;
 }
 
@@ -4523,4 +4540,40 @@ table.newReselerTable{
 .color_picker .colorScreen .item{
     padding: 8px 12px;
     cursor: pointer;
+}
+
+.economy,.first,.business{
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.economy{
+    background: rgba(249, 115, 22, 0.1);
+    color: #F97316;
+}
+.first{
+    background: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+}
+.business{
+    background: rgba(139, 92, 246, 0.1);
+    color: #8B5CF6;
+}
+
+.createBtn {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+.createBtn .icon{
+    font-size: 22px;
+    line-height: 16px;
+}
+.bookingSearch{
+   width: 400px;
+}
+@media (max-width: 720px){
+    .bookingSearch{
+        width: auto;
+     }
 }
