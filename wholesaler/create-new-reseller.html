@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/datatables.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/select2.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>CSN Travel</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <aside class="sidebar-wrap hide" id="sidebar">
+                <ul>
+                    <a href="dashboard.html" class="py-3 logo position-relative d-block mb-4">
+                        <img class="main-logo" src="../assets/images/logo.svg" alt="logo" />
+                    </a>
+
+                    <a href="dashboard.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/dashboard.svg" alt="icon" />Dashboard
+                    </a>
+
+                    <a href="booking.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/booking.svg" alt="" />
+                        Booking
+                    </a>
+
+                    <a href="reseller.html" class="side-menu active">
+                        <img width="20" src="../assets/icons/SVG/reseller.svg" alt="" />
+                        Reseller
+                    </a>
+
+                    <a href="wallet.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/Wallet.svg" alt="" />
+                        Wallet
+                    </a>
+
+                    <a href="#reports" class="side-menu" data-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="reports">
+                        <img width="20" src="../assets/icons/SVG/report.svg" alt="" />
+                        <span class="d-flex justify-content-between align-items-center w-100">
+                            Reports
+                            <i class="fa fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <div class="reportMenu">
+                        <div class="collapse" id="reports">
+                            <a href="report-last-sale.html" class="sub-menu">Last Sale</a>
+                            <a href="report-airline-wise.html" class="sub-menu">Airline Wise</a>
+                            <a href="report-destitation-wise.html" class="sub-menu">Destination Wise</a>
+                        </div>
+                    </div>
+
+                    <a href="profile.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/profile.svg" alt="" />
+                        Profile
+                    </a>
+
+                    <!-- Configaration -->
+                    <div class="border-top mb-2"></div>
+                    <a href="configaration.html" class="side-menu">
+                        <img width="20" src="../assets/icons/SVG/configuration.svg" alt="" />
+                        Configuration
+                    </a>
+                </ul>
+
+                <div class="bottom_user d-none d-md-block">
+                    <div class="d-flex justify-content-between">
+                        <img class="avater" src="../assets/images/Shop logo.svg" />
+                        <div>
+                            <a href="/" class="auth">Wholesaler</a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <span class="name">Moshe Shop</span>
+                        <span class="email">shop_00@example.com</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <!--************** Start Header Section ************-->
+                <div class="sticky-top w-100 top_navbar">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-10 bg-white py-2 text-right">
+                            <a href="#" id="toggle-btn" onclick="toggleSidebar()" class="btn toggle-sidebar">
+                                <i class="fas fa-bars"></i>
+                            </a>
+
+                            <div class="multilanguage-section">
+                                <a href="#" class="language active">EN</a>
+                                <a href="#" class="language">IT</a>
+                            </div>
+
+                            <div class="left-header">
+                                <div class="dropdown m-0">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-expanded="false">
+                                        <img class="avater" src="../assets/images/Shop logo.svg" alt="profile" />
+                                    </button>
+                                    <div class="dropdown-menu header-dropdown-menu card-shadow"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="change-password.html">
+                                            <img src="../assets//icons/SVG/key.svg" />
+                                            Change Password
+                                        </a>
+                                        <a class="dropdown-item" href="#logout"
+                                            onclick="event.preventDefault();document.getElementById('logout').submit()">
+                                            <img src="../assets/icons/SVG/logout.svg" />
+                                            Log out
+                                        </a>
+                                        <form id="logout" action="login.html" method="get"></form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--************** End Header Section ************-->
+
+                <div class="row">
+                    <div class="col-lg-2 pr-0"></div>
+                    <div class="col-lg-10 content body-color p-0 pb-2">
+                        <div class="mt-3 container-fluid px-lg-4">
+                            <!--*********** Start Layout Section *************-->
+
+                            <a href="reseller-profile.html" class="BackButton">
+                                <img src="../assets/icons/SVG/left.svg" width="22" /> Back</a>
+
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-8">
+                                        <div class="card card-body">
+                                            <h4 class="mb-4 font-weight-bolder">New Reseller</h4>
+                                            <div class="accordion" id="accordionExample">
+                                                <button class="collapseBtn btn-block" type="button"
+                                                    data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal Information
+                                                    <i class="fas fa-angle-down"></i>
+                                                    <div class="rounded">
+                                                        <i class="fas fa-circle"></i>
+                                                    </div>
+                                                </button>
+
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body pb-0 pr-0">
+                                                        <div class="row">
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Name</label>
+                                                                <input type="text" placeholder="Enter Name"
+                                                                    class="form-control" />
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Surname</label>
+                                                                <input type="text" placeholder="Enter Surname"
+                                                                    class="form-control" />
+                                                            </div>
+
+                                                            <div class="col-12 mb-3">
+                                                                <label class="mb-1">Tax code (CF)</label>
+                                                                <input type="text" placeholder="Enter Tax code (CF)"
+                                                                    class="form-control" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Genre</label>
+                                                                <input type="text" placeholder="Enter Genre"
+                                                                    class="form-control" />
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Date of Birth</label>
+                                                                <input type="date" class="form-control" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">County of Birth</label>
+                                                                <input type="text" placeholder="Enter County of Birth"
+                                                                    class="form-control" />
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">City of Birth</label>
+                                                                <input type="date" class="form-control" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Citizenship
+                                                                    <span class="text-danger">*</span></label>
+                                                                <select name="" class="form-control">
+                                                                    <option value="">Gibuti</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Telephone Number</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Telephone Number" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Mobile Number
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Mobile Number" />
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Email
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Email" />
+                                                            </div>
+
+                                                            <div class="border-dot"></div>
+
+                                                            <div class="col-12 mb-2 mt-2">
+                                                                <h6 class="default-color font-weight-bold">
+                                                                    Address information
+                                                                </h6>
+                                                            </div>
+
+                                                            <div class="col-md-8 mb-3">
+                                                                <label class="mb-1">Residence Address
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Mobile Residence Address" />
+                                                            </div>
+                                                            <div class="col-md-4 mb-3">
+                                                                <label class="mb-1">Civic No
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Civic No" />
+                                                            </div>
+
+                                                            <div class="col-md-12 mb-3">
+                                                                <label class="mb-1">Province of Residence
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Province of Residence" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-md-0 mb-3">
+                                                                <label class="mb-1">City of Residence
+                                                                    <span class="text-danger">*</span></label>
+                                                                <select name="" class="form-control">
+                                                                    <option value="">Monsano</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="mb-1">Postal Code
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Postal Code" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="divider_section">
+                                                    <div class="divide_line"></div>
+                                                </div>
+
+                                                <button class="collapseBtn btn-block collapsed" type="button"
+                                                    data-toggle="collapse" data-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    Company Information
+                                                    <i class="fas icon fa-angle-down"></i>
+                                                    <div class="rounded">
+                                                        <i class="fas fa-circle"></i>
+                                                    </div>
+                                                </button>
+
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body pb-0 pr-0">
+                                                        <div class="row">
+                                                            <div class="col-md-8 mb-3">
+                                                                <label class="mb-1">Company Type
+                                                                    <span class="text-danger">*</span></label>
+                                                                <select name="" class="form-control">
+                                                                    <option value="">Gibuti</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4 mb-3">
+                                                                <label class="mb-1">VAT Number
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" placeholder="Enter VAT Number"
+                                                                    class="form-control" />
+                                                            </div>
+
+                                                            <div class="col-12 mb-3">
+                                                                <label class="mb-1">Company Name
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" placeholder="Enter Company Name"
+                                                                    class="form-control" />
+                                                            </div>
+
+                                                            <div class="border-dot"></div>
+
+                                                            <div class="col-12 mb-2 mt-2">
+                                                                <h6 class="default-color font-weight-bold">
+                                                                    Address information
+                                                                </h6>
+                                                            </div>
+
+                                                            <div class="col-md-12 mb-3">
+                                                                <label class="mb-1">Company Address
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Company Address" />
+                                                            </div>
+
+                                                            <div class="col-md-12 mb-3">
+                                                                <label class="mb-1">Company Province
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Company Province" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Company City
+                                                                    <span class="text-danger">*</span></label>
+                                                                <select name="" class="form-control">
+                                                                    <option value="">Monsano</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Postal Code
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Email" />
+                                                            </div>
+
+                                                            <div class="col-md-6 mb-3">
+                                                                <label class="mb-1">Business Phone
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Telephone Number" />
+                                                            </div>
+                                                            <div class="col-md-6 mb-md-0 mb-3">
+                                                                <label class="mb-1">Business Mobile
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Mobile Number" />
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <label class="mb-1">Company Email
+                                                                    <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Email" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="divider_section">
+                                                    <div class="divide_line"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Preview box section -->
+                                    <div class="col-lg-4 col-md-5 mt-3 mt-md-0">
+                                        <div class="previewBox d-flex justify-content-between flex-column">
+                                            <div>
+                                                <div class="header">
+                                                    <span>Preview</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="preview-content">
+                                                        <label class="m-0">Full Name</label>
+                                                        <p>Mr. Manik Mia</p>
+                                                    </div>
+                                                    <div class="border_botton"></div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Name</label>
+                                                            <p id="company_name_prv">--</p>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Surname</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+                                                        <div class="col-12 item">
+                                                            <label>Tax code (CF) </label>
+                                                            <p id="vat_id_prv">--</p>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Genre</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Date of Birth</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>County of Birth</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>City of Birth</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Citizenship</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Telephone Number</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Mobile Number</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-12 col-sm-6 item">
+                                                            <label>Email</label>
+                                                            <p id="cf_prv">--</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="p-3">
+                                                <button type="submit" class="w-100 btnAction bg-primary">Submit</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <!--******* End Layout Section ******-->
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function showHidePassword(parems) {
+            const toggle = document.getElementById("togglePassword" + parems);
+            const password = document.getElementById("password" + parems);
+
+            // toggle the type attribute
+            const type =
+                password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            // toggle the icon
+            toggle.classList.toggle("fa-eye");
+        }
+    </script>
+</body>
+
+</html>
