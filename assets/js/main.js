@@ -169,3 +169,7 @@ validateVatNumber = function(value) {
 
     return validVat;
 };
+
+$(".clickable-row").click(function() {
+    window.location = $(this).data("href");
+});

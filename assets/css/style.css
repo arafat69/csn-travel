@@ -18,7 +18,9 @@ body {
     clip: rect(0, 0, 0, 0);
     pointer-events: none;
 }
-
+.text-primary{
+    color: var(--default-color) !important;
+}
 .reportMenu {
     margin-left: 48px !important;
 }
@@ -92,7 +94,10 @@ p {
     background-color: var(--default-color) !important;
 }
 
-a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
+a.bg-primary:focus,
+a.bg-primary:hover,
+button.bg-primary:focus,
+button.bg-primary:hover {
     background-color: var(--default-color) !important;
     opacity: 0.9;
 }
@@ -4709,6 +4714,7 @@ table.newReselerTable {
 .bookingSearch {
     width: 400px;
 }
+
 .shopLogo {
     width: 40px;
     height: 40px;
@@ -4732,31 +4738,34 @@ table.newReselerTable {
     font-weight: 500;
     font-size: 20px;
 }
-.resetPassword_box{
-   max-width: 512px;
-   margin: auto;
+
+.resetPassword_box {
+    max-width: 512px;
+    margin: auto;
 }
-.resetPassword_box h3{
+
+.resetPassword_box h3 {
     text-align: center;
     font-size: 28px;
 }
 
-.resetPassword_box .card_details_profile .profile{
+.resetPassword_box .card_details_profile .profile {
     width: 70px;
     height: 70px;
 }
 
-@media (min-width: 1024px){
-    .passwordReset_section{
+@media (min-width: 1024px) {
+    .passwordReset_section {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 86vh;
     }
-    .resetPassword_box{
+
+    .resetPassword_box {
         width: 512px;
-     }
+    }
 }
 
 @media (max-width: 768px) {
@@ -4764,9 +4773,88 @@ table.newReselerTable {
         width: auto;
     }
 }
+
 @media (max-width: 548px) {
-    .resetPassword_box .card_details_profile{
+    .resetPassword_box .card_details_profile {
         text-align: center;
         gap: 6px;
     }
+}
+
+.subTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #111827;
+    margin-bottom: 16px;
+}
+.issued{
+    font-size: 12px;
+    color: #0E7490;
+    background: rgba(14, 116, 144, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+.wallet_header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.wallet_header a{
+    padding: 12px 24px;
+    border-radius: 24px;
+    color: #475569;
+}
+.wallet_header .active{
+    background: rgba(14, 116, 144, 0.1);
+    color: var(--default-color);
+}
+.clickable-row{
+    cursor: pointer;
+}
+.wallet_header .resellerShopBtn{
+    padding: 12px 24px;
+    border-radius: 24px;
+    border: none;
+}
+.wallet_header .resellerShopBtn a{
+    display: inline-flex;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0;
+    font-size: 12px;
+    color: #fff;
+    background: var(--default-color);
+    border-radius: 50%;
+    justify-content: center ;
+    align-items: center;
+    margin-left: 10px;
+}
+.report_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    background: #FFFFFF;
+    margin-top: 12px;
+}
+.report_header .title{
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.top_airlineProgess{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.top_airlineProgess .progressBar{
+    height: 8px;
+    background: var(--default-color);
+    border-radius: 4px;
 }
