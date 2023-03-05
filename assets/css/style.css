@@ -237,6 +237,12 @@ img.avater {
     width: 176px;
 }
 
+@media (max-width: 1260px){
+    .main-logo {
+        width: 80%;
+    }
+}
+
 .add {
     text-align: center;
     margin-top: 6px;
@@ -4857,4 +4863,14 @@ table.newReselerTable {
     height: 8px;
     background: var(--default-color);
     border-radius: 4px;
+}
+.select-date{
+    position: relative;
+}
+.select-date::before{
+    content: url('../icons/SVG/calendar.svg');
+    position: absolute;
+    height: 20px;
+    right: 10px;
+    top: calc(50% - 10px);
 }
