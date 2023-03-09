@@ -159,50 +159,27 @@
                     </div>
                   </div>
 
-                  <div class="flightDetails mt-3">
-                    <button class="rounded-8" data-toggle="collapse" href="#collapseExample">
-                      <div class="title">Flight details</div>
-                      <div class="arrow">
-                        <img src="assets/icons/SVG/arrow-up.svg" />
+                  <div class="flight_detail mt-3">
+                    <div class="title">Flight details</div>
+                    <div class="details_content">
+                      <div class="from_to">
+                        <span class="font-14">DAC</span>
+                        <img src="assets/icons/SVG/right-black.svg" />
+                        <span class="font-14">CXB</span>
                       </div>
-                    </button>
-                    <div class="collapse details show" id="collapseExample">
-                      <div class="details_content rounded-8">
-                        <div class="classAndPlace">
-                          <div class="from_to">
-                            <span class="font-14">DAC</span>
-                            <img src="assets/icons/SVG/right-black.svg" />
-                            <span class="font-14">CXB</span>
-                          </div>
-                          <div class="class">Economy</div>
-                        </div>
-                        <div class="flight">
-                          <div class="airline">
-                            <div class="logo">
-                              <img src="assets/images/airline1.png" alt="" />
-                              <div>
-                                <span class="name">Emirates</span>
-                                <p class="m-0 text-gray font-12">
-                                  BS 153 | AT7
-                                </p>
-                              </div>
-                            </div>
-                            <div class="from_to_duration">
-                              <div class="duration">
-                                <span class="font-14 font-weight-bold">9:55</span>
-                                <span class="font-12">01h 00m</span>
-                                <span class="font-14 font-weight-bold">11:00</span>
-                              </div>
-                              <div class="line"></div>
-                              <div class="fromTo">
-                                <span class="font-14">DAC</span>
-                                <span class="font-12">direct</span>
-                                <span class="font-14">CXB</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+
+                      <div class="airline">
+                        <span class="name">Emirates</span>
+                        <p class="m-0 text-gray font-12">
+                          BS 153 | AT7
+                        </p>
+                        <span class="class">Economy</span>
                       </div>
+                        <div class="duration">
+                          <span class="font-14 font-weight-bold">9:55</span>
+                          <span class="font-12">01h 00m</span>
+                          <span class="font-14 font-weight-bold">11:00</span>
+                        </div>
                     </div>
                   </div>
 
@@ -280,13 +257,14 @@
                       <h5 class="">Payment Method</h5>
                       <div class="payment_method">
 
-                        <input type="radio" name="payment_method" id="card" class="btn-check" autocomplete="off">
-                        <label for="card" class="method" id="card">
+                        <input type="radio" name="payment_method" id="cash" class="btn-check" autocomplete="off">
+                        <label for="cash" class="method" id="cash">
                           <div class="type">
                             <div class="chackBox">
                               <div class="dot"></div>
                             </div>
-                            Card
+
+                            Cash
                           </div>
                           <div>
                             <img src="assets/images/cash.svg">
@@ -294,13 +272,13 @@
                         </label>
 
                         <div>
-                          <input type="radio" name="payment_method" id="cash" class="btn-check" autocomplete="off">
-                          <label for="cash" class="method" data-toggle="collapse" href="#cardPayment">
+                          <input type="radio" name="payment_method" id="card" class="btn-check" autocomplete="off">
+                          <label for="card" class="method" data-toggle="collapse" href="#cardPayment">
                             <div class="type">
                               <div class="chackBox">
                                 <div class="dot"></div>
                               </div>
-                              Cash
+                              Card
                             </div>
                             <div>
                               <img src="assets/images/card-pay.svg">
@@ -419,7 +397,7 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    $('#card').click(function () {
+    $('#cash').click(function () {
       $('.collapse').collapse('hide')
     });
   </script>

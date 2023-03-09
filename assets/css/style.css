@@ -4909,3 +4909,174 @@ table.newReselerTable {
     color: #EF4444;
     font-weight: normal;
 }
+
+.cardRounded {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: none;
+}
+
+.booking_primary_assenger {
+    padding: 16px 24px;
+    background: #fff;
+    border: 2px dashed #0E7490;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.booking_primary_assenger .flightDetails {
+    box-shadow: none;
+}
+
+.booking_details_section {
+    background: #FFFFFF;
+    min-height: 68vh;
+    padding: 0 24px;
+}
+
+.booking_details_section .title {
+    font-weight: 700;
+    font-size: 16px !important;
+    margin-top: 12px;
+}
+
+.booking_primary_assenger .sendSMS {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.booking_primary_assenger .sendSMS a {
+    color: var(--default-color) !important;
+}
+
+.booking_primary_assenger .contact_details {
+    padding-bottom: 16px;
+    border-bottom: 4px solid #E5E7EB;
+}
+
+.booking_details_section .weight {
+    padding: 12px;
+    background: #F9FAFB;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.booking_details_section .weight .kg {
+    display: flex;
+    gap: 12px;
+    color: #6B7280;
+}
+
+@media (min-width: 1024px) {
+    .booking_details_section .others_passerger_details {
+        height: 70vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .booking_details_section .others_passerger_details::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .booking_details_section .others_passerger_details::-webkit-scrollbar-thumb {
+        background: #D1D5DB;
+        border-radius: 4px;
+    }
+}
+
+.booking_details_section .others_passerger_details {
+    background: #000;
+    background: #F9FAFB;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.booking_details_footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px;
+    gap: 16px;
+    background: #FFFFFF;
+    border-top: 1px solid #D1D5DB;
+}
+
+.booking_details_footer a {
+    flex-grow: 1;
+}
+
+.ticketStatus {
+    padding: 8px 12px;
+    border-radius: 18px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.ticketStatus.quoted {
+    background: rgba(249, 115, 22, 0.15);
+    color: #F97316;
+}
+
+.ticketStatus.issued {
+    background: rgba(14, 116, 144, 0.15);
+    color: #0E7490;
+}
+
+.ticketStatus.cancelled {
+    background: #FEE2E2;
+    color: #EF4444;
+}
+
+.booking_cancelled {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 16px 24px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 4px;
+}
+
+.flight_detail {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+}
+.flight_detail .title{
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E7EB;
+    font-weight: 500;
+font-size: 20px;
+}
+.flight_detail .details_content{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+.flight_detail .airline{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+    justify-content: space-around;
+    border-right: 1px solid #E5E7EB;
+}
+.flight_detail .from_to{
+    border-right: 1px solid #E5E7EB;
+    padding-right: 16px;
+}
+.flight_detail .class{
+    background: #E5E7EB;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 12px;
+}
+.flight_detail .details_content .name{
+    min-width: 140px;
+}

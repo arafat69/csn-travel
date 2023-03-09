@@ -123,7 +123,7 @@
               <!--*********** Start Layout Section *************-->
 
               <div>
-                <a href="booking.html" class="BackButton">
+                <a href="booking-ticketed.html" class="BackButton">
                   <img src="assets/icons/SVG/left.svg" width="22" /> Back
                 </a>
               </div>
@@ -134,7 +134,7 @@
                   <div class="card-body">
                     <div class="heading d-flex justify-content-between align-items-center flex-wrap">
                       <h4 class="font-weight-bold">Booking Details</h4>
-                      <span class="ticketStatus quoted">Ticket quoted</span>
+                      <span class="ticketStatus issued">Ticket issued</span>
                     </div>
                   </div>
                 </div>
@@ -366,76 +366,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="booking_details_footer">
-                  <a href="" class="btn text-danger">Cancel</a>
-                  <a href="javascript:void(0)" class="btn btn-outline-default text-primary" data-toggle="modal" data-target="#voidBooking"
-                  type="button">Void</a>
-                  <a href="" class="btn btn-outline-default text-primary">SSR Entry</a>
-                  <a href="" class="btn btn-primary">Issue Booking</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal Void booking -->
-            <div class="modal fade" id="voidBooking">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="">
-                      <div class="d-flex align-items-start gap-8">
-                        <img src="assets/icons/SVG/remove-red.svg">
-
-                        <div class="confirmed_message_box">
-
-                          <h3 class="title">Void Ticket?</h3>
-                          <p class="descriptipons">Are you sure you want to cancel the booking? Type a cancelation reason to confirm cancel booking.</p>
-                          <textarea name="" class="form-control" rows="3" placeholder="Type reason"></textarea>
-                          <div class="d-flex justify-content-end gap-8">
-                            <button class="btnAction text-dark" type="button" data-dismiss="modal"
-                              aria-label="Close" data-toggle="modal" data-target="#somethingwrongBooking">Cancel</button>
-                            <button class="btnAction bg-danger text-white" type="submit">Confirm</button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal Void booking -->
-            <div class="modal fade" id="somethingwrongBooking">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="">
-                      <div class="d-flex align-items-start gap-8">
-                        <img src="assets/icons/SVG/wrong.svg">
-
-                        <div class="confirmed_message_box">
-
-                          <h3 class="title">Something went wrong!</h3>
-                          <p class="descriptipons">The name of the person you are entering does not match the name of the person in the ticket booking.</p>
-                          <div class="d-flex justify-content-end gap-8">
-                            <button class="btnAction text-dark" type="button" data-dismiss="modal"
-                              aria-label="Close">Cancel</button>
-                            <button class="btnAction bg-primary text-white" type="submit">Try Again</button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
                   </div>
                 </div>
               </div>
