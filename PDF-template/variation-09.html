@@ -34,7 +34,7 @@
         }
 
         .float-left {
-            float: left;
+            float: left;+-
         }
 
         .mt-2 {
@@ -58,7 +58,8 @@
         .header_section {
             position: relative !important;
         }
-        .page-body{
+
+        .page-body {
             padding: 0 16px;
         }
 
@@ -113,6 +114,10 @@
             margin: 0;
         }
 
+        .pt-3 {
+            padding-top: 24px;
+        }
+
         .headerTop {
             padding: 0 16px;
             padding-bottom: 8px;
@@ -132,12 +137,11 @@
         table {
             border-collapse: collapse;
             width: 100%;
-            border: 1px solid #c9e9f6;
-            margin-bottom: 12px;
         }
 
         table td,
         table th {
+            border: 1px solid #bdbec0;
             font-size: 14px;
             vertical-align: top;
             padding: 8px;
@@ -147,34 +151,23 @@
         table th {
             font-weight: 600;
             color: #000000;
-            text-align: left;
-            background: #c9e9f6;
-            padding: 12px auto;
-        }
-
-        table td {
-            line-height: 28px;
-        }
-
-        .itm {
-            line-height: 24px;
-            vertical-align: middle
         }
 
         .itm span {
-            display: inline-table;
-            width: 80px;
+            display: block;
+            color: #919193
         }
 
         .ticket_item {
-            margin-top: 26px;
+            margin-top: 30px;
         }
 
         .ticket_item .from_to {
-            background: #27a5df;
-            padding: 12px;
+            width: 100%;
+            background: #1567a1;
+            padding: 12px 0;
             font-size: 14px;
-            text-align: left;
+            text-align: center;
             color: #fff
         }
 
@@ -195,35 +188,54 @@
             color: #aaaaaa
         }
 
+        .bg-gray-light {
+            background: #d1d2d4;
+        }
+
+        .bg-gray {
+            background: #bdbec0;
+        }
+
+        .font-bold {
+            font-weight: 600;
+        }
+
         .text-right {
             text-align: right
         }
-        .address{
+
+        .address {
             background: #e7e8ea;
             font-size: 15px;
             padding: 10px 16px;
             height: 20px;
         }
-        .address .csnTravel{
+
+        .address .csnTravel {
             font-size: 18px;
-            font-weight:bold;
+            font-weight: bold;
         }
-        .ownerName{
+
+        .ownerName {
             margin-top: 12px;
             padding: 0 16px;
         }
-        .ownerName span{
+
+        .ownerName span {
             margin-right: 10px;
         }
+
         .ownerName span::before {
             content: "•";
             margin-right: 3px;
         }
-        .ownerName span:first-child{
+
+        .ownerName span:first-child {
             font-weight: bold;
             font-size: 22px;
         }
-        .ownerName span:first-child::before{
+
+        .ownerName span:first-child::before {
             content: ''
         }
     </style>
@@ -231,7 +243,6 @@
 </head>
 
 <body>
-
     <div class="header_section">
         <div class="headerTop">
             <div class="float-left">
@@ -263,84 +274,89 @@
             <span>/</span>
             <span class="lst">2658265826582658</span>
         </div>
-
     </div>
 
     <div class="page-body">
         <div class="ticket_item">
-            <div class="from_to">
-                <span>Milano(MXP), Malpensa International Airport</span>
-                <img src="./image/airplan.svg" alt="">
-                <span>Vantaa(HEL), HElsinki-Vantaa Airport</span>
-            </div>
             <table>
                 <tr>
-                    <th>TRAVEL DATE</th>
-                    <th>AIRLINE</th>
-                    <th>DEPARTURE</th>
-                    <th>ARRIVAL</th>
-                    <th>OTHERS</th>
+                    <th class="bg-gray" style="width: 110px">TRAVEL DATE</th>
+                    <th class="bg-gray-light" style="min-width: 100px">AIRLINE</th>
+                    <th class="bg-gray">DEPARTURE</th>
+                    <th class="bg-gray-light">ARRIVAL</th>
+                    <th class="bg-gray">OTHERS</th>
                 </tr>
                 <tr>
                     <td>
-                        <span>Wed</span>
+                        <span class="font-bold">Wed</span>
                         <br>
-                        <span>21 Sep 22</span>
+                        <span class="font-bold">21 Sep 22</span>
                     </td>
                     <td>
-                        Finnair <br>
-                        AY 1752 <br>
-                        Economy
+                        <span>Finnair</span>
+                        <br>
+                        <br>
+                        <span>AY 1752</span>
+                        <br>
+                        <br>
+                        <span>Economy</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Milano(MXP), Malpensa International Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
                         <div class="itm"><span>Passenger:</span> 05</div>
+                        <br>
                         <div class="itm"><span>Luggages:</span> 02</div>
+                        <br>
                         <div class="itm"><span>Duration:</span> 03:00</div>
                     </td>
                 </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>TRAVEL DATE</th>
-                    <th>AIRLINE</th>
-                    <th>DEPARTURE</th>
-                    <th>ARRIVAL</th>
-                    <th>OTHERS</th>
-                </tr>
                 <tr>
                     <td>
-                        <span>Wed</span>
+                        <span class="font-bold">Wed</span>
                         <br>
-                        <span>21 Sep 22</span>
+                        <span class="font-bold">21 Sep 22</span>
                     </td>
                     <td>
-                        Finnair <br>
-                        AY 1752 <br>
-                        Economy
+                        <span>Finnair</span>
+                        <br>
+                        <br>
+                        <span>AY 1752</span>
+                        <br>
+                        <br>
+                        <span>Economy</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Milano(MXP), Malpensa International Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
                         <div class="itm"><span>Passenger:</span> 05</div>
+                        <br>
                         <div class="itm"><span>Luggages:</span> 02</div>
+                        <br>
                         <div class="itm"><span>Duration:</span> 03:00</div>
                     </td>
                 </tr>
@@ -348,84 +364,91 @@
         </div>
 
         <div class="ticket_item">
-            <div class="from_to">
-                <span>Milano(MXP), Malpensa International Airport</span>
-                <img src="./image/airplan.svg" alt="">
-                <span>Vantaa(HEL), HElsinki-Vantaa Airport</span>
-            </div>
             <table>
                 <tr>
-                    <th>TRAVEL DATE</th>
-                    <th>AIRLINE</th>
-                    <th>DEPARTURE</th>
-                    <th>ARRIVAL</th>
-                    <th>OTHERS</th>
+                    <th class="bg-gray" style="width: 110px">TRAVEL DATE</th>
+                    <th class="bg-gray-light" style="min-width: 100px">AIRLINE</th>
+                    <th class="bg-gray">DEPARTURE</th>
+                    <th class="bg-gray-light">ARRIVAL</th>
+                    <th class="bg-gray">OTHERS</th>
                 </tr>
                 <tr>
                     <td>
-                        <span>Wed</span>
+                        <span class="font-bold">Wed</span>
                         <br>
-                        <span>21 Sep 22</span>
+                        <span class="font-bold">21 Sep 22</span>
                     </td>
                     <td>
-                        Finnair <br>
-                        AY 1752 <br>
-                        Economy
+                        <span>Finnair</span>
+                        <br>
+                        <br>
+                        <span>AY 1752</span>
+                        <br>
+                        <br>
+                        <span>Economy</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Milano(MXP), Malpensa International Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
                         <div class="itm"><span>Passenger:</span> 05</div>
+                        <br>
                         <div class="itm"><span>Luggages:</span> 02</div>
+                        <br>
                         <div class="itm"><span>Duration:</span> 03:00</div>
                     </td>
                 </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>TRAVEL DATE</th>
-                    <th>AIRLINE</th>
-                    <th>DEPARTURE</th>
-                    <th>ARRIVAL</th>
-                    <th>OTHERS</th>
-                </tr>
                 <tr>
                     <td>
-                        <span>Wed</span>
+                        <span class="font-bold">Wed</span>
                         <br>
-                        <span>21 Sep 22</span>
+                        <span class="font-bold">21 Sep 22</span>
                     </td>
                     <td>
-                        Finnair <br>
-                        AY 1752 <br>
-                        Economy
+                        <span>Finnair</span>
+                        <br>
+                        <br>
+                        <span>AY 1752</span>
+                        <br>
+                        <br>
+                        <span>Economy</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Milano(MXP), Malpensa International Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
-                        Terminale-1
-                        <br>
-                        21 Sep 2022 at 15:05
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport</span>
+                        <br><br>
+                        <span>Terminale-1</span>
+                        <br><br>
+                        <span>21 Sep 2022 at 15:05</span>
                     </td>
                     <td>
                         <div class="itm"><span>Passenger:</span> 05</div>
+                        <br>
                         <div class="itm"><span>Luggages:</span> 02</div>
+                        <br>
                         <div class="itm"><span>Duration:</span> 03:00</div>
                     </td>
                 </tr>
             </table>
         </div>
+
 
         <footer>
             <span style="margin-right: 16px">Change/Refund Policy Apply</span>
@@ -433,7 +456,6 @@
         </footer>
 
     </div>
-
 </body>
 
 </html>

@@ -58,6 +58,7 @@
         .header_section {
             position: relative !important;
         }
+
         .page-body{
             padding: 0 16px;
         }
@@ -132,28 +133,21 @@
         table {
             border-collapse: collapse;
             width: 100%;
-            border: 1px solid #c9e9f6;
-            margin-bottom: 12px;
         }
 
         table td,
         table th {
+            border: 1px solid #1567a1;
             font-size: 14px;
             vertical-align: top;
             padding: 8px;
             font-weight: normal;
+            line-height: 22px
         }
 
         table th {
             font-weight: 600;
-            color: #000000;
-            text-align: left;
-            background: #c9e9f6;
-            padding: 12px auto;
-        }
-
-        table td {
-            line-height: 28px;
+            color: #1567a1;
         }
 
         .itm {
@@ -171,10 +165,11 @@
         }
 
         .ticket_item .from_to {
-            background: #27a5df;
-            padding: 12px;
+            width: 100%;
+            background: #1567a1;
+            padding: 12px 0;
             font-size: 14px;
-            text-align: left;
+            text-align: center;
             color: #fff
         }
 
@@ -198,32 +193,39 @@
         .text-right {
             text-align: right
         }
-        .address{
+
+        .address {
             background: #e7e8ea;
             font-size: 15px;
             padding: 10px 16px;
             height: 20px;
         }
-        .address .csnTravel{
+
+        .address .csnTravel {
             font-size: 18px;
-            font-weight:bold;
+            font-weight: bold;
         }
-        .ownerName{
+
+        .ownerName {
             margin-top: 12px;
             padding: 0 16px;
         }
-        .ownerName span{
+
+        .ownerName span {
             margin-right: 10px;
         }
+
         .ownerName span::before {
             content: "•";
             margin-right: 3px;
         }
-        .ownerName span:first-child{
+
+        .ownerName span:first-child {
             font-weight: bold;
             font-size: 22px;
         }
-        .ownerName span:first-child::before{
+
+        .ownerName span:first-child::before {
             content: ''
         }
     </style>
@@ -231,7 +233,6 @@
 </head>
 
 <body>
-
     <div class="header_section">
         <div class="headerTop">
             <div class="float-left">
@@ -265,8 +266,8 @@
         </div>
 
     </div>
-
     <div class="page-body">
+
         <div class="ticket_item">
             <div class="from_to">
                 <span>Milano(MXP), Malpensa International Airport</span>
@@ -307,15 +308,6 @@
                         <div class="itm"><span>Luggages:</span> 02</div>
                         <div class="itm"><span>Duration:</span> 03:00</div>
                     </td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>TRAVEL DATE</th>
-                    <th>AIRLINE</th>
-                    <th>DEPARTURE</th>
-                    <th>ARRIVAL</th>
-                    <th>OTHERS</th>
                 </tr>
                 <tr>
                     <td>
@@ -387,15 +379,6 @@
                         <div class="itm"><span>Luggages:</span> 02</div>
                         <div class="itm"><span>Duration:</span> 03:00</div>
                     </td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>TRAVEL DATE</th>
-                    <th>AIRLINE</th>
-                    <th>DEPARTURE</th>
-                    <th>ARRIVAL</th>
-                    <th>OTHERS</th>
                 </tr>
                 <tr>
                     <td>
@@ -433,7 +416,6 @@
         </footer>
 
     </div>
-
 </body>
 
 </html>

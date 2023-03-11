@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            height: 100%;
+            margin: 0 16px;
+            font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            position: static;
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .text-primary {
+            color: #0b4462;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .mt-2 {
+            margin-top: 16px;
+        }
+
+        @font-face {
+            font-family: 'typewrong';
+            font-style: normal;
+            font-weight: normal;
+            src: url('http://desk.cafcsn.it/web/assets/font/typwrng.ttf') format('ttf');
+        }
+
+        @font-face {
+            font-family: 'roboto-bold';
+            font-style: normal;
+            font-weight: normal;
+            src: url('http://desk.cafcsn.it/web/assets/font/Roboto/Roboto-Bold.ttf') format('ttf');
+        }
+
+        .header_section {
+            position: relative !important;
+        }
+
+        .ownerName {
+            margin-top: 12px;
+            z-index: 99;
+            font-family: sans-serif;
+        }
+
+        .ownerName .name {
+            font-size: 26px;
+            font-weight: bolder;
+        }
+
+        .other_name {
+            margin-top: 8px;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+
+        .other_name span {
+            margin-top: 12px;
+            margin-right: 16px;
+        }
+
+        .other_name span::before {
+            content: "•";
+            margin-right: 3px;
+        }
+
+        .header_ticket_number {
+            margin-top: 30px;
+            font-size: 22px;
+            font-family: sans-serif;
+            letter-spacing: 2;
+        }
+
+        .header_ticket_number .fst {
+            margin-right: 6px;
+        }
+
+        .header_ticket_number .lst {
+            margin-left: 6px;
+        }
+
+        .contact_No h3 {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0;
+            text-align: right;
+        }
+
+        .contact_No p {
+            margin: 0;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .font-lg {
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .font-sm {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        .headerTop {
+            border-bottom: 5px solid #76c5ee;
+            padding-bottom: 8px;
+            height: 136px;
+        }
+
+        .headerTop p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .agentLogo {
+            height: 80px;
+            margin-top: 50px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #f4f3b0;
+            margin-bottom: 12px;
+        }
+
+        table td,
+        table th {
+            font-size: 13px;
+            vertical-align: top;
+            padding: 8px;
+            font-weight: normal;
+        }
+
+        .ticket_item {
+            margin-top: 60px;
+        }
+
+        .ticket_item .from_to {
+            height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 3px solid #0b4462;
+            margin-bottom: 12px;
+        }
+
+        .ticket_item .from_to img {
+            width: 100px;
+            margin: 0 12px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 16px;
+            right: 2px;
+            width: 12px;
+        }
+
+        .number_support {
+            height: 60px;
+            margin-top: 12px;
+        }
+
+        .bg-color {
+            background: #f4f3b0;
+        }
+
+        .width {
+            height: 16px;
+            margin-top: 6px;
+            vertical-align: middle;
+        }
+        .width span{
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+
+        div.width :first-child {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .col div {
+            margin-top: 16px;
+            line-height: 18px
+        }
+    </style>
+    <title>travelTicket</title>
+</head>
+
+<body>
+    <div class="header_section">
+        <div class="headerTop text-primary">
+            <div class="float-left">
+                <h1 style="margin-bottom: 4px">CSN Travel</h1>
+                <p>Via Firenze, 18, 36100 Vicenza (VI)</p>
+                <p>+3904441497243</p>
+                <p>info@cafcsn.it</p>
+                <p>www.cafcsn.it</p>
+            </div>
+            <div class="float-right">
+                <img src="./image/logo2.png" class="agentLogo">
+            </div>
+        </div>
+
+        <div class="ownerName">
+            <span class="name">Milon Mahmud</span>
+            <div class="other_name">
+                <span>Ashik / Molla</span>
+                <span>Kuddus / Ali</span>
+                <span>Hamid / Mia</span>
+                <span>Johir / Amin</span>
+            </div>
+        </div>
+
+        <div class="number_support">
+            <div class="header_ticket_number float-left">
+                <span class="fst">PFD524</span>
+                <span>/</span>
+                <span class="lst">2658265826582658</span>
+            </div>
+            <div class="contact_No float-right">
+                <h3>Support or Booking</h3>
+                <p><span class="font-sm">+39</span><span class="font-lg">04441497243</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket_item">
+        <div class="from_to text-primary">
+            <div class="float-left">
+                <span>MXP</span>
+                <img src="./image/airplan2.svg" alt="">
+                <span>HEL</span>
+            </div>
+            <div class="float-right">
+                <span>Web, 21 Sep 2022</span>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td class="bg-color">
+                    <div><span>Airline: </span><strong>Finnair Oyi</strong></div>
+                    <div class="width">
+                        <span>Seat:</span>
+                        <span>AY 1752</span>
+                    </div>
+                    <div class="width">
+                        <span>Class:</span>
+                        <span>Economy</span>
+                    </div>
+                    <div class="width">
+                        <span>Passenger:</span>
+                        <span>05</span>
+                    </div>
+                    <div class="width">
+                        <span>Luggages:</span>
+                        <span>02</span>
+                    </div>
+                    <div class="width">
+                        <span>Duration:</span>
+                        <span>03:00</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <p style="margin: 0">Departure:</p>
+                        <span>Milano(MXP), Malpensa International Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                    <div>
+                        <p style="margin: 0">Arrival:</p>
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="bg-color">
+                    <div><span>Airline: </span><strong>Finnair Oyi</strong></div>
+                    <div class="width">
+                        <span>Seat:</span>
+                        <span>AY 1752</span>
+                    </div>
+                    <div class="width">
+                        <span>Class:</span>
+                        <span>Economy</span>
+                    </div>
+                    <div class="width">
+                        <span>Passenger:</span>
+                        <span>05</span>
+                    </div>
+                    <div class="width">
+                        <span>Luggages:</span>
+                        <span>02</span>
+                    </div>
+                    <div class="width">
+                        <span>Duration:</span>
+                        <span>03:00</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <p style="margin: 0">Departure:</p>
+                        <span>Milano(MXP), Malpensa International Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                    <div>
+                        <p style="margin: 0">Arrival:</p>
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="ticket_item">
+        <div class="from_to text-primary">
+            <div class="float-left">
+                <span>MXP</span>
+                <img src="./image/airplan2.svg" alt="">
+                <span>HEL</span>
+            </div>
+            <div class="float-right">
+                <span>Web, 21 Sep 2022</span>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td class="bg-color">
+                    <div><span>Airline: </span><strong>Finnair Oyi</strong></div>
+                    <div class="width">
+                        <span>Seat:</span>
+                        <span>AY 1752</span>
+                    </div>
+                    <div class="width">
+                        <span>Class:</span>
+                        <span>Economy</span>
+                    </div>
+                    <div class="width">
+                        <span>Passenger:</span>
+                        <span>05</span>
+                    </div>
+                    <div class="width">
+                        <span>Luggages:</span>
+                        <span>02</span>
+                    </div>
+                    <div class="width">
+                        <span>Duration:</span>
+                        <span>03:00</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <p style="margin: 0">Departure:</p>
+                        <span>Milano(MXP), Malpensa International Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                    <div>
+                        <p style="margin: 0">Arrival:</p>
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="bg-color">
+                    <div><span>Airline: </span><strong>Finnair Oyi</strong></div>
+                    <div class="width">
+                        <span>Seat:</span>
+                        <span>AY 1752</span>
+                    </div>
+                    <div class="width">
+                        <span>Class:</span>
+                        <span>Economy</span>
+                    </div>
+                    <div class="width">
+                        <span>Passenger:</span>
+                        <span>05</span>
+                    </div>
+                    <div class="width">
+                        <span>Luggages:</span>
+                        <span>02</span>
+                    </div>
+                    <div class="width">
+                        <span>Duration:</span>
+                        <span>03:00</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <p style="margin: 0">Departure:</p>
+                        <span>Milano(MXP), Malpensa International Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                    <div>
+                        <p style="margin: 0">Arrival:</p>
+                        <span>Vantaa(HEL), HElsinki-Vantaa Airport, </span>
+                        <span>Terminale-1</span>
+                    </div>
+                </td>
+                <td class="col">
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                    <div>
+                        <div style="margin: 0px">Date and Time</div>
+                        <span>21 Sep 2022 at 15:05</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <img src="./image/side-text.png" alt="">
+    </footer>
+
+
+</body>
+
+</html>

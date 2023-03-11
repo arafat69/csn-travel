@@ -5046,20 +5046,23 @@ table.newReselerTable {
     border-radius: 8px;
     padding: 16px;
 }
-.flight_detail .title{
+
+.flight_detail .title {
     padding: 12px 0;
     border-bottom: 1px solid #E5E7EB;
     font-weight: 500;
-font-size: 20px;
+    font-size: 20px;
 }
-.flight_detail .details_content{
+
+.flight_detail .details_content {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 12px 0;
 }
-.flight_detail .airline{
+
+.flight_detail .airline {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -5067,16 +5070,35 @@ font-size: 20px;
     justify-content: space-around;
     border-right: 1px solid #E5E7EB;
 }
-.flight_detail .from_to{
+
+.flight_detail .from_to {
     border-right: 1px solid #E5E7EB;
     padding-right: 16px;
 }
-.flight_detail .class{
+
+.flight_detail .class {
     background: #E5E7EB;
     border-radius: 12px;
     padding: 4px 12px;
     font-size: 12px;
 }
-.flight_detail .details_content .name{
+
+.flight_detail .details_content .name {
     min-width: 140px;
+}
+
+.dropleft .dropdown-toggle::before {
+    transform: rotate(270deg);
+}
+
+.pdf_template {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.pdf_template iframe{
+    padding: 12px;
+    background: #F9FAFB;
+    border: none;
+    overflow: hidden;
 }
