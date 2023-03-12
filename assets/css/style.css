@@ -90,11 +90,23 @@ p {
 .bg-primary {
     background-color: var(--default-color) !important;
     color: #fff;
+    border-color: var(--default-color);
 }
 
 .bg-primary:hover {
     background-color: var(--default-color) !important;
 }
+
+.btn-outline-primary {
+    border-color: var(--default-color);
+    color: var(--default-color);
+}
+
+.btn-outline-primary:hover {
+    background: var(--default-color);
+    border-color: var(--default-color);
+}
+
 
 a.bg-primary:focus,
 a.bg-primary:hover,
@@ -5091,14 +5103,93 @@ table.newReselerTable {
     transform: rotate(270deg);
 }
 
+.pdf_template_sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
 .pdf_template {
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-.pdf_template iframe{
+
+.pdf_template .pdf_image {
     padding: 12px;
+    padding-bottom: 0;
     background: #F9FAFB;
+}
+
+.pdf_template .view_setBtn {
+    padding: 12px;
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pdf_template .view_setBtn .btn {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.configaration_contents .persentences {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bankDetails {
+    background: #F3F4F6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    transition: 0.5s ease-in-out;
+}
+
+.bankDetails .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 8px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.bankDetails .header h4 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.bankDetails .header .edit_btn img {
+    width: 14px;
+}
+
+.bankDetails .header .save_btn img {
+    width: 15px;
+}
+
+.bankDetails .header .edit_btn,
+.bankDetails .header .save_btn {
+    background: #F9FAFB;
+    border-radius: 16px;
+    padding: 6px 12px;
+    font-size: 14px;
     border: none;
-    overflow: hidden;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: #334155;
+}
+
+.bankDetails .header .save_btn {
+    background: #0E7490;
+    color: #FFFFFF;
+}
+
+#editBankDetail{
+    display: none;
 }
